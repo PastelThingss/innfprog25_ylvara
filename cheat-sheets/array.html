@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array cheat sheet</title>
+</head>
+<body>
+    <script>
+        const shoppinglist = ["Dinner", "Bread", "Milk", "egg", "Bacon"]
+
+       // console.log("shoppinglist", shoppinglist)
+
+        const products = [
+            {
+                id: "1",
+                name: "Red Dead Redemption 2", 
+                year: 2018
+            },
+            {
+                id: "2",
+                name: "Pokemoen",
+                year: 1995
+            },
+            {
+                id: "3",
+                name: "Valheim",
+                year: 2021
+            }
+        ]
+        //commented out the "other" type of code where we used console.log instead of useing map as we are writeing here
+       // console.log("productlist", products)
+
+       products.map((prod) => {
+            console.log(prod.year)
+       })
+
+
+
+    </script>
+</body>
+</html>

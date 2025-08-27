@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables cheat sheet</title>
+</head>
+<body>
+    <p id="nameprint"></p>
+    <p id="nameprint_temlist"></p>
+    <p id="calculation">0</p>
+
+    <script>
+        //our first javascript comment. And under, our first ever variabel:
+        const firstname = "Lucy"
+        //writeing out firstname to the console
+        console.log(firstname)
+        //Writeing out firstname to the HTML konkatinering
+        document.getElementById("nameprint").innerHTML = "hello" + firstname
+        //write out firstname to the HTMl with a template literal
+        document.getElementById("nameprint_temlit").innerHTML = `hello ${firstname}. Is everything going okay with you?`
+
+        //write out a simple math equation
+        document.getElementById("calculation").innerHTML = 10 + 5
+    </script>
+</body>
+</html>

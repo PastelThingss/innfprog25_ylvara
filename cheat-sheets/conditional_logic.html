@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional logic - Cheat Sheet</title>
+</head>
+<body>
+    <h2>Are you qualfied to take the driver license</h2>
+    <p id="carmsg"></p>
+    <h2>can the player open the door?</h2>
+    <p id="doormsg"></p>
+    <h2>Can I retire soon?</h2>
+    <p id="retire"></p>
+
+    <script>
+
+        //driver licsence
+        const age = 35
+        const tg_passed = true
+        //if-test
+        if(age >= 18 && tg_passed === true){
+            document.getElementById("carmsg").innerHTML = "yes"
+        } else{
+            document.getElementById("carmsg").innerHTML = "no"
+        }
+
+        //check if door is locked, eventually check if player has the key in their bag
+        const door_locked = true
+        const backpack = "key"
+
+        let utskrift = document.getElementById("doormsg")
+
+        if(door_locked === false){
+            utskrift.innerHTML = "yes"
+        } else {
+            if(backpack === "key"){
+                utskrift.innerHTML = "yes"
+            } else {
+                utskrift.innerHTML = "no"
+            }
+        }
+
+        //pensjon
+        let retiremsg = document.getElementById("retire")
+
+        //check if possible ages to retire
+        if(age >= 62 && age < 67) {
+            retiremsg.innerHTML = "you can retire with AFP."
+        } else if(age >= 67){
+            retiremsg.innerHTML = "you can go off and retire with full pension"
+        } else {
+            retiremsg.innerHTML = `You can gå off with AFP about ${62 - age} year, and full pension about ${67 - age} year.`
+            //for å kunne legge til en til setning som skal leses samtidig og ikke overskirve den andre så adder du et plusstegn før er lik tegnet altså +=
+        }
+
+    </script>
+</body>
+</html>
