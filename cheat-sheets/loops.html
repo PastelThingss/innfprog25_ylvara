@@ -37,6 +37,17 @@
 
         console.log(gangetabellen)
 
+        //Sjekk om tall er deleig på X
+        const x = 0
+        const z = 3
+        const y = 100
+
+        for (let teller = x; teller <= y; teller++){
+            if(teller % z === 0){
+                console.log(`${teller},`)
+            }
+        }
+
         const months = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"]
         const date = {
             year: new Date().getFullYear(),
@@ -72,12 +83,13 @@
         }
     ]
 
+    //har blitt bytta ut med .map
         for(let teller = 0; teller < famObj.length; teller++){
             if(date.month <= famObj[teller].birthmonth){
-                console.log(`${famObj[teller].fName}`)
+                console.log(`${famObj[teller].fName} fyller ${date.year - famObj[teller].birthyear} år i ${months[famObj[teller].birthmonth - 1]}`)
 
             } else{
-                console.log(`${famObj[teller].fName}`)
+                console.log(`${famObj[teller].fName} fylte ${date.year - famObj[teller].birthyear} år i ${months[famObj[teller].birthmonth - 1]}`)
             }
         }
 
@@ -107,6 +119,7 @@
         while(teller < 10){
             teller++
             console.log(teller)
+            //While 
         }
 
     </script>
