@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeidskrav 1 - Innføring i programmering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="ak1.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <header>
+        <h1 id="companyname"></h1>
+        <form>
+            <input type="text" />
+            <button>Søk</button>
+        </form>
+    </header>
+    <!--here is the css code I used for the vl in the site: 
+        .vl {
+            border-right: 1px solid rgb(0, 0, 0) ;
+            margin-right: 5px;
+        }-->
+    <main>
+        <!--(6.) I added the correct html image file path. so instead of it going to avatar.png. I made it go to img1 folder and then the different correct imgs to the different correct users-->
+        <!--I also fixed the alt tags to be the names of the users instead of navn navnsen. 
+        I also fixed the missing alt tag for the number for the office they are at.
+        I also fixed the mail to be the users mail instead of the navnnavnsen@email.com
+        I also fixed the missing info of the users the where no info word about what kind of worker they where
+        and the where they are working and what number the office the are working at-->
+        <!--So added a extra br tag for the extra info and a extra alt tag for the extra info.-->
+        <!--I also added the span tag for the vertical line in between the words of programmer and office.
+        so the iste would look identical-->
+        <section id="employee_list">
+            <article class="card">
+                <img src="img1/man.png" alt="Hans Hansen" alt="316" />
+                <p>Hans Hansen<br />Programmerer <span class="vl"></span> Kontor: 316<br />hans.hansen@email.com</p>
+            </article>
+            <article class="card">
+                <img src="img1/man2.png" alt="Jens Jensen" alt="323" />
+                <p>Jens Jensenn<br /> Programmerer <span class="vl"></span> Kontor: 323<br />jens.jensen@email.com</p>
+            </article>
+            <!--(5.)It was missing a person file in here so I added one-->
+            <article class="card">
+                <img src="img1/woman.png" alt="Trine Trinesdotter"  alt="304"/>
+                <p>Trine Trinesdotter<br />Programmerer <span class="vl"></span> Kontor: 304<br />trine.trinesdotter@email.com</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <a href="https://www.flaticon.com/free-icons/user" title="female icons">User icons created by Prosymbols Premium, Freepik, Smashicons, and Vectors Market - found at Flaticon</a>
+        </p>
+    </footer>
+<!--(1.) changed script tag cause it was incorrectly written. It was written like scripttt instead of like this script.-->
+    <script>
+        //Variabel with company name
+        const company = "Programmeriet"
+
+        //List of employees
+        const employees = [
+            {name: "Hans Hansen", position: "Programmerer", email: "hans.hansen@email.com", office: "316", image: "man"},
+            {name: "Jens Jensen", position: "Programmerer", email: "jens.jensen@email.com", office: "323", image: "man2"},
+            {name: "Trine Trinesdotter", position: "Programmerer", email: "trine.trinesdotter@email.com", office: "304", image: "woman"},
+        ]
+
+        //Secret keys to access url and images
+        //(2.)fixed the bunny ears for img tag cause it was written with only one bunny ear like this "img instead of being written with two bunny ears like this "img"
+        let images_folder = "img"
+        let secret_key = 0
+        let ak_key
+        
+        //Turn on or off safeguard to allow system to run
+        const safeguard = false
+        
+        //Control of safeguard to create image folder name
+        if(safeguard === true) {
+            ak_key = secret_key + 1
+        }
+        
+        const safe_images_folder = images_folder += ak_key
+        //(3.)It was written wrong it was written like logg when it is meant to be written like this log
+        console.log ("Image folder: " + safe_images_folder)
+
+        let HTML_employees = ""
+
+        //Control of safeguard to print employee list
+        if(safeguard === true) {
+            employees.map((e) => HTML_employees += `<article class="card">
+                    <img src="${safe_images_folder}/${e.image}.png" alt="${e.name}" />
+                    <p><strong>${e.name}</strong></p>
+                    <p>${e.position} | Kontor: ${e.office}</p>
+                    <p>${e.email}</p>
+                </article>`)
+                //(4.) I fixed the written error in get ElementById cause it was written wrong cause it was written like this getElementbyId. When it was supposed to be written like this getElementById
+                document.getElementById("employee_list").innerHTML = HTML_employeeees
+        }
+
+        //System prints
+        document.getElementById("companyname").innerHTML = company
+    </script>
+</body>
+</html>
