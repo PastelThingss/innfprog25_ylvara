@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../oppgave1/actions.js"></script>
+    <script src="../oppgave1/register.js"></script>
+    <link rel="style.css" href="stylesheet.css"></link>
+    </head>
+    <body>
+        <main>
+            <form id="infoSheet">
+                <input required type="text" id="firstname">
+                <input required type="text" id="lastname">
+                <input required type="email" id="email">
+                <input required type="text" id="office">
+                <select required type="text" id="stlling"> 
+                <option value = "0">
+                    Proffesor
+                </option>
+                <option value = "2">
+                    Dekan
+                </option>
+                <option value = "1">
+                    Rektor
+                </option>
+                <option value = "4">
+                    Lektor
+                </option>
+                <option value = "3">
+                    Vaktmester
+                </option>
+                </select>   
+                <input type="text" id="Kurs">
+                <button type="submit">teksty</button>
+            </form>
+            <article>
+                <button onclick="displayAllEmployees ()">Vis alle ansatte</button>
+                <button onclick="filtersTeachers ()">Vis undervisere</button>
+                <button onclick="filterAdministration ()">Vis administrasjon</button>
+            </article>
+            <article>
+                <button onclick="filterByPosition('Professor')">Professor</button>
+                <button onclick="filterByPosition('Dekan')">Dekan</button>
+                <button onclick="filterByPosition('Rektor')">Rektor</button>
+                <button onclick="filterByPosition('Vaktmester')">Vaktmester</button>
+                <button onclick="filterByPosition('Lektor')">Lektor</button>
+            </article>
+            <article id="employees-list">
+
+            </article>
+            <article id="all-courses-list">
+
+            </article>
+        </main>
+    </body>
+    <script>
+        displayAllEmployees (adminbutton = true)
+        getAllCourses ()
+
+        const form = document.getElementById ("infoSheet")
+
+        form.onsubmit = function (event) {
+            event.preventDefault()
+    /*     const firstname = event.firstname.value*/
+
+            const firstname = event.target.elements [0] .value
+            const lastname = event.target.elements [1] .value
+            const email = event.target.elements [2] .value
+            const office = event.target.elements [3] .value
+            const position = Number (event.target.elements [4] .value)
+            const courses = event.target.elements [5] .value .split (",")
+            if (courses.length === 1 && courses [0] === "") {
+                courses. pop ()
+            }
+
+            const employee =     {
+        firstname: firstname,
+        lastname: lastname,
+        office: office,
+        email: email,
+        position: positions[position],
+        courses: courses
+
+            }
+            // console.log (employee)
+            addEmployee (employee)
+            displayAllEmployees (adminbutton = true)
+            form.reset ()
+        }
+
+        /*displayAllEmployees (employees)*/
+
+        /*console.log (getSingleEmployee (16))*/
+
+        /*console.log (filterByPosition ("Professor"))*/
+
+        /*console.log (getAllCourses (employees))*/
+
+        /*console.log (filtersTeachers (employees))*/
+
+        /*console.log (filterAdministration (employees))*/
+
+        /*console.log (addEmployee (  employees,      {
+        firstname: "tetsOla v3",
+        lastname: "Berg",
+        office: "C310",
+        email: "6ola.berg@hiof.no",
+        position: positions[3],
+        courses: []
+    }))
+
+        console.log (removeEmployee (employees, 3))*/
+    </script>
+</html>
