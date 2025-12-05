@@ -1,11 +1,13 @@
 //I prefer writing code and comments in English even dho the task we have got is in Norwegian. I might use some of the names or words you used in the videos as names for some code fucntions and so on.
-// Since some of them will be weird to translate to english and the site isteself are gonna show its content in Norwegian.
+// Since some of them will be weird to translate to english and the site itself are gonna show its content in Norwegian.
 
 //this file shall include the data structure of the workers(ansatte) at a university. one worker shall have a last name and a first name. which office they are at(sitting at), also which work
 //postions they have and the name of the work postion they have (that spesific worker). their work mail (mail adress) and for last it shall also include which courses they have or have the responsibility for.
 //the work postions they can have are: Professor, Dekan, Janitor, Principal. (Norwegian: Professor, Rektor, Dekan, Vaktmester og Lektor). The notes to myself about the task and so has been moved to a seperate file as to not clog this one up.
 
 // remember that stilling (postion) shall be its own list and that it shall be used in the indexsen from this list to explain which stilling (postion) one employye/worker (ansatt) has in the the overview(oversikt) over the employees/workers(ansatte). 
+// remember to make the list over all the courses available at the university.
+//COMMENT HERE
 const positions = [
     "Professor", 
     "Rektor", 
@@ -13,7 +15,7 @@ const positions = [
     "Vaktmester",
     "Lektor"
 ]
-
+//COMMENT HERE
 const employees = [
     {
         firstname: "Ola R1",

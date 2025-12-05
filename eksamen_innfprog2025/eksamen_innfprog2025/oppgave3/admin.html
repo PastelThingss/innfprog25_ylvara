@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    //COMMENT HERE
     <script src="../oppgave1/actions.js"></script>
     <script src="../oppgave1/register.js"></script>
-    <link rel="style.css" href="stylesheet.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
     </head>
     <body>
         <main>
+            //COMMENT HERE
             <form id="infoSheet">
                 <input required type="text" id="firstname">
                 <input required type="text" id="lastname">
@@ -34,13 +36,15 @@
                 </option>
                 </select>   
                 <input type="text" id="Kurs">
-                <button type="submit">teksty</button>
+                <button type="submit">Legg til ansatt</button>
             </form>
+            //COMMENT HERE
             <article>
                 <button onclick="displayAllEmployees ()">Vis alle ansatte</button>
                 <button onclick="filtersTeachers ()">Vis undervisere</button>
                 <button onclick="filterAdministration ()">Vis administrasjon</button>
             </article>
+            //COMMENT HERE
             <article>
                 <button onclick="filterByPosition('Professor')">Professor</button>
                 <button onclick="filterByPosition('Dekan')">Dekan</button>
@@ -48,15 +52,18 @@
                 <button onclick="filterByPosition('Vaktmester')">Vaktmester</button>
                 <button onclick="filterByPosition('Lektor')">Lektor</button>
             </article>
+            //COMMENT HERE
             <article id="employees-list">
 
             </article>
+            //COMMENT HERE
             <article id="all-courses-list">
 
             </article>
         </main>
     </body>
     <script>
+        //COMMENT HERE
         displayAllEmployees (adminbutton = true)
         getAllCourses ()
 
@@ -90,7 +97,7 @@
             displayAllEmployees (adminbutton = true)
             form.reset ()
         }
-
+        //COMMENT HERE
         /*displayAllEmployees (employees)*/
 
         /*console.log (getSingleEmployee (16))*/

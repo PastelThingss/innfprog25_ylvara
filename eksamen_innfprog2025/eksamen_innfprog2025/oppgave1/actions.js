@@ -4,7 +4,7 @@
 //coruses dosent equal the kursansvar so remeber to fix courses so it means the same as kursansvar
 //THINK STRUCTUALLY SOUND BONES FOR THE CODE THINK OF A ATATOMIC SKELETON STRUCTURE AND NOT A ABOMINATION!!
 //REMEMBER TO COMMENT YOUR GAH DAMN CODE U TUFF NUGGET. ALSO LINKY LINK RIGHT NO FORGET ONLY REMEMBER!!:D
-
+//COMMENT HERE
 //function 2
 const displayAllEmployees = (adminbutton = false) => {
     const container = document.getElementById ("employees-list")
@@ -16,7 +16,7 @@ const displayAllEmployees = (adminbutton = false) => {
     return container
     // for (let index in employessLength)
 }
-
+//COMMENT HERE
 //function 3
 const filterByPosition = (positionName) => {
     const container = document.getElementById ("employees-list")
@@ -28,7 +28,7 @@ const filterByPosition = (positionName) => {
     })
     return container
 }
-
+//COMMENT HERE
 //function 4
 const getAllCourses = () => {
     const allCourses = []
@@ -47,7 +47,7 @@ const getAllCourses = () => {
     coursesHTML.appendChild (ul)
     return allCourses
 }
-
+//COMMENT HERE
 //function 5
 const filtersTeachers = () => {
     const container = document.getElementById ("employees-list")
@@ -59,7 +59,7 @@ const filtersTeachers = () => {
     })
     return container
 }
-
+//COMMENT HERE
 //function 6
 const filterAdministration =() => {
     const container = document.getElementById ("employees-list")
@@ -71,7 +71,7 @@ const filterAdministration =() => {
     })
     return container
 }
-
+//COMMENT HERE
 //function 7
 const addEmployee = (newEmployee) => {
     if (!newEmployee) {
@@ -80,6 +80,7 @@ const addEmployee = (newEmployee) => {
     employees.push (newEmployee)
     return employees
 }
+//COMMENT HERE
  //befire u move on fix written errrors or other writing mistakes in this part.
 //function 8 den egentlige åttende men er syvende?? se om du forstår eller hører hva han sier.
 const removeEmployee = (index) => {
@@ -89,7 +90,7 @@ const removeEmployee = (index) => {
     employees.splice (index, 1)
     return employees
 }
-
+//COMMENT HERE
 const getSingleEmployee = (index,adminbutton = false) => {
     const employee = employees[index]
     const article = document.createElement("article")
@@ -103,7 +104,7 @@ const getSingleEmployee = (index,adminbutton = false) => {
 //game plan for now so your squirrel brain can read this if you somehow forget yur train of tought. which is
 //is to try to put Para on psotions,office and email and the Tostring one to see of this fixes it. 
 // in simple terms copy courses chnage it to fit the needs of the other parts of the workers card yeah:) For hope this makes sense to yourself later we both can hope for that past me to future me
-
+//COMMENT HERE
     const positionPara = document.createElement ("p"); //have you mixed two things in this code part now? let it be and work on somthing else here and comeback and see if you can see your error. Present me thinks we might have mixed up in the way of is it this or that. Future me will tell me in the way of code stays or be chnaged
     //positionPara.textContent = `position: ${positions[employee.position]}`;
     positionPara.textContent = `position: ${employee.position}`
@@ -130,7 +131,7 @@ const getSingleEmployee = (index,adminbutton = false) => {
         coursesPara.textContent = "courses: ingen kursansvar"
         article.appendChild (coursesPara)
     }
-
+//COMMENT HERE
     if(
         adminbutton === true
     ){
