@@ -103,7 +103,7 @@ const filterAdministration =() => {
     const container = document.getElementById ("employees-list")
     container.innerHTML = ""
     employees.forEach ((employee,index) => {
-        if (employee.position == "Principal" || employee.position === "Dekan") {
+        if (employee.position == "Rektor" || employee.position === "Dekan") {
         container.appendChild (getSingleEmployee(index))
     }
     })
