@@ -12,16 +12,28 @@
     <body>
         <main>
             <article>
-                <button>alle ansa</button>
-                <button></button>
-                <button></button>
+                <button onclick="displayAllEmployees ()">Vis alle ansatte</button>
+                <button onclick="filtersTeachers ()">Vis undervisere</button>
+                <button onclick="filterAdministration ()">Vis administrasjon</button>
+            </article>
+            <article>
+                <button onclick="filterByPosition('Professor')">Professor</button>
+                <button onclick="filterByPosition('Dekan')">Dekan</button>
+                <button onclick="filterByPosition('Rektor')">Rektor</button>
+                <button onclick="filterByPosition('Vaktmester')">Vaktmester</button>
+                <button onclick="filterByPosition('Lektor')">Lektor</button>
             </article>
             <article id="employees-list">
+
+            </article>
+            <article id="all-courses-list">
 
             </article>
         </main>
     </body>
     <script>
+        displayAllEmployees ()
+        getAllCourses ()
         /*displayAllEmployees (employees)*/
 
         /*console.log (getSingleEmployee (16))*/

@@ -50,7 +50,7 @@ const getSingleEmployee = (index) => {
 //REMEMBER TO COMMENT YOUR GAH DAMN CODE U TUFF NUGGET. ALSO LINKY LINK RIGHT NO FORGET ONLY REMEMBER!!:D
 
 //function 2
-const displayAllEmployees = ( employees ) => {
+const displayAllEmployees = () => {
     const container = document.getElementById ("employees-list")
     container.innerHTML = ""
     // const employessLength = employess.length
@@ -74,15 +74,21 @@ const filterByPosition = (positionName) => {
 }
 
 //function 4
-const getAllCourses = (employees) => {
+const getAllCourses = () => {
     const allCourses = []
+    const coursesHTML = document.getElementById ("all-courses-list")
+    const ul = document.createElement("ul")
     employees.forEach (employees => {
         employees.courses.forEach (course => {
             if(!allCourses.includes (course)) {
+                const li = document.createElement ("li")
+                li.textContent = course
+                ul.appendChild (li)
                 allCourses.push (course)
             }
         })
     })
+    coursesHTML.appendChild (ul)
     return allCourses
 }
 
@@ -111,7 +117,7 @@ const filterAdministration =() => {
 }
 
 //function 7
-const addEmployee = (employees, newEmployee) => {
+const addEmployee = (newEmployee) => {
     if (!newEmployee) {
         return false
     }
@@ -120,7 +126,7 @@ const addEmployee = (employees, newEmployee) => {
 }
  //befire u move on fix written errrors or other writing mistakes in this part.
 //function 8 den egentlige åttende men er syvende?? se om du forstår eller hører hva han sier.
-const removeEmployee = (employees, index) => {
+const removeEmployee = (index) => {
     if (!employees) {
         return false
     }
