@@ -4,24 +4,23 @@
 //this file shall include the data structure of the workers(ansatte) at a university. one worker shall have a last name and a first name. which office they are at(sitting at), also which work
 //postions they have and the name of the work postion they have (that spesific worker). their work mail (mail adress) and for last it shall also include which courses they have or have the responsibility for.
 //the work postions they can have are: Professor, Dekan, Janitor, Principal. (Norwegian: Professor, Rektor, Dekan, Vaktmester og Lektor). The notes to myself about the task and so has been moved to a seperate file as to not clog this one up.
-const workersData = [
-    {
-        firstname: "",
-        lastname: "",
-        office: "",
-        position: "",
-        email: "",
-        courses: "",
-    }
+
+// remember that stilling (postion) shall be its own list and that it shall be used in the indexsen from this list to explain which stilling (postion) one employye/worker (ansatt) has in the the overview(oversikt) over the employees/workers(ansatte). 
+const positions = [
+    "Professor", 
+    "Rektor", 
+    "Dekan", 
+    "Vaktmester",
+    "Lektor"
 ]
-//or shall I use this set up hmm?
+
 const employees = [
     {
         firstname: "Ola R1",
         lastname: "Berg",
         office: "C310",
         email: "1ola.berg@hiof.no",
-        postion: positions[1],
+        position: positions[1],
         courses: []
     },
 
@@ -30,7 +29,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "2ola.berg@hiof.no",
-        postion: positions[2],
+        position: positions[2],
         courses: []
     },
         {
@@ -38,7 +37,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "3ola.berg@hiof.no",
-        postion: positions[2],
+        position: positions[2],
         courses: []
     },
 
@@ -47,7 +46,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "4ola.berg@hiof.no",
-        postion: positions[3],
+        position: positions[3],
         courses: []
     },
     {
@@ -55,7 +54,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "5ola.berg@hiof.no",
-        postion: positions[3],
+        position: positions[3],
         courses: []
     },
         {
@@ -63,7 +62,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "6ola.berg@hiof.no",
-        postion: positions[3],
+        position: positions[3],
         courses: []
     },
 
@@ -72,7 +71,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "7ola.berg@hiof.no",
-        postion: positions[0],
+        position: positions[0],
         courses: ["C1"]
     },
     {
@@ -80,7 +79,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "8ola.berg@hiof.no",
-        postion: positions[0],
+        position: positions[0],
         courses: ["C2"]
     },
         {
@@ -88,7 +87,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "9ola.berg@hiof.no",
-        postion: positions[0],
+        position: positions[0],
         courses: ["C3"]
     },
         {
@@ -96,7 +95,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "10ola.berg@hiof.no",
-        postion: positions[0],
+        position: positions[0],
         courses: ["C4"]
     },
     {
@@ -104,7 +103,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "11ola.berg@hiof.no",
-        postion: positions[0],
+        position: positions[0],
         courses: ["C5"]
     },
 
@@ -113,7 +112,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "12ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C6"]
     },
             {
@@ -121,7 +120,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "13ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C7"]
     },
 
@@ -130,7 +129,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "14ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C8"]
     },
     {
@@ -138,7 +137,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "15ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C9"]
     },
         {
@@ -146,7 +145,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "16ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C10"]
     },
 
@@ -155,7 +154,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "17ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C11"]
     },
     {
@@ -163,7 +162,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "18ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C12"]
     },
         {
@@ -171,7 +170,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "19ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C13","2C3"]
     },
         {
@@ -179,7 +178,7 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "20ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C14","2C2"]
     },
     {
@@ -187,16 +186,8 @@ const employees = [
         lastname: "Berg",
         office: "C310",
         email: "21ola.berg@hiof.no",
-        postion: positions[4],
+        position: positions[4],
         courses: ["C15","2C1"]
     }
 ]
 
-// remember that stilling shall be its own list and that it shall be sued in the indexsen from this list to explain which stilling one employye/worker (ansatt) has in the the overview(oversikt) over the employees/workers(ansatte). 
-const positions = [
-    "Professor", 
-    "Rektor", 
-    "Dekan", 
-    "Vaktmester",
-    "Lektor"
-]
