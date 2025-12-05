@@ -111,7 +111,7 @@ const filterAdministration =() => {
 }
 
 //function 7
-const addEmployee = (newEmployee, employees) => {
+const addEmployee = (employees, newEmployee) => {
     if (!newEmployee) {
         return false
     }
