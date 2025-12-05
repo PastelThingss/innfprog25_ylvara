@@ -28,13 +28,18 @@ const getSingleEmployee = (index) => {
     emailPara.textContent = `email: ${employee.email}`
     article.appendChild (emailPara)
 
-
+    const coursesPara = document.createElement ("p")
     if (employee.courses.length > 0) {
-        const coursesPara = document.createElement ("p")
+        
     //const courses = document.createElement ("p")
     const coursesTostring = employee.courses.join (", ")
     coursesPara.textContent = `courses: ${coursesTostring}`
     article.appendChild (coursesPara)
+    }
+    else {
+        const coursesTostring = employee.courses.join (", ")
+        coursesPara.textContent = "courses: ingen kursansvar"
+        article.appendChild (coursesPara)
     }
     //comment for myself: Are you mixing up things now? Like as a example is this courses or teachers, make
     //sure you write about the correct or are not writing one thing and thinking/meaning the other one! double check yourself here!
@@ -45,12 +50,15 @@ const getSingleEmployee = (index) => {
 //REMEMBER TO COMMENT YOUR GAH DAMN CODE U TUFF NUGGET. ALSO LINKY LINK RIGHT NO FORGET ONLY REMEMBER!!:D
 
 //function 2
-const displayAllEmployees = () => {
+const displayAllEmployees = ( employees ) => {
     const container = document.getElementById ("employees-list")
     container.innerHTML = ""
-    employess.forEach ((_, index) => {
+    // const employessLength = employess.length
+    employees.forEach ((_, index) => {
     container.appendChild (getSingleEmployee(index))
     })
+    return container
+    // for (let index in employessLength)
 }
 
 //function 3
@@ -62,15 +70,16 @@ const filterByPosition = (positionName) => {
             container.appendChild (getSingleEmployee (index))
         }
     })
+    return container
 }
 
 //function 4
-const getAllCourses = () => {
-    const all Courses = []
-    employees.forEach (employee => {
-        employee.courses.forEach (course => {
-            if(!getAllCourses.includes (course)) {
-                getAllCourses.push (course)
+const getAllCourses = (employees) => {
+    const allCourses = []
+    employees.forEach (employees => {
+        employees.courses.forEach (course => {
+            if(!allCourses.includes (course)) {
+                allCourses.push (course)
             }
         })
     })
@@ -79,35 +88,43 @@ const getAllCourses = () => {
 
 //function 5
 const filtersTeachers = () => {
-    const conatiner = document.getElementById ("employyes-list")
+    const container = document.getElementById ("employees-list")
     container.innerHTML = ""
-    employees.forEach((employee, index) =>{
-        if (employee.position == "professor" || employee.postition === "Lektor") {¨
+    employees.forEach((employee, index) => {
+        if (employee.position == "Professor" || employee.position === "Lektor") {
             container.appendChild (getSingleEmployee (index))
         }
     })
+    return container
 }
 
 //function 6
-const filterAdminstration =() => {
+const filterAdministration =() => {
     const container = document.getElementById ("employees-list")
     container.innerHTML = ""
-    employees.forEach ((employee,index)) => {
-        if employee.postion == #Principal" || employee.postiion === "dekan") {
+    employees.forEach ((employee,index) => {
+        if (employee.position == "Principal" || employee.position === "Dekan") {
         container.appendChild (getSingleEmployee(index))
     }
     })
+    return container
 }
 
 //function 7
-const add Employee = (newEmployeer) => {
-    if (!newEmployee || !newEmployee-firstname || !newEmplkoye.lastnae) {
-        rerun false
+const addEmployee = (newEmployee, employees) => {
+    if (!newEmployee) {
+        return false
     }
-    employes.splice (index, 1)
-    rerun ture
+    employees.push (newEmployee)
+    return employees
 }
  //befire u move on fix written errrors or other writing mistakes in this part.
 //function 8 den egentlige åttende men er syvende?? se om du forstår eller hører hva han sier.
-const
+const removeEmployee = (employees, index) => {
+    if (!employees) {
+        return false
+    }
+    employees.splice (index, 1)
+    return employees
+}
 
