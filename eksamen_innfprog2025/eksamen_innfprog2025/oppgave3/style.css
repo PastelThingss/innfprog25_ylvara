@@ -1,3 +1,4 @@
+/**/
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: skyblue;
@@ -6,3 +7,15 @@ body {
 * {
     box-sizing: border-box;
 }
+
+/*for the admin html sheet for the fill out form*/
+/*form styling*/
+#infoSheet {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid black ;
+}
+
+
