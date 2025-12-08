@@ -11,7 +11,7 @@ body {
 main {
     padding: 1rem 5rem;
 }
-/*for the register html*/
+/*for the register html and admin html*/
 #Hogskolen {
     background-color: rgb(69, 154, 187);
     color: white;
@@ -19,6 +19,7 @@ main {
     text-align: center;
     margin-bottom: 1rem;
     width: 100%;
+    reset: all;
 }
 
 /*for the admin html sheet for the fill out form*/
@@ -46,12 +47,13 @@ main {
     reset: all;
 }
 
-/*for the button on the form*/
+/*for the button on the form in admin html*/
 #infoSheet button {
     padding: 0.5rem;
     width: 50%;
     margin: 1rem;
     background-color: rgb(194, 227, 241);
+    border: 1px rgb(68, 157, 192) solid;
     border-radius: 5px;
     reset: all;
 }
@@ -87,6 +89,19 @@ main {
     background-color: white;
     border-radius: 5px;
 }
+
+#employees-list > article button {
+    all:unset;
+    border: 1px rgb(68, 157, 192) solid;
+    border-radius: 5px;
+    margin: 0.3rem;
+    padding: 0.5rem;
+    background-color: rgb(194, 227, 241);
+    margin-inline: 0.3rem;
+    padding-inline: 0.5rem;
+    reset: all;
+}
+
 /*for the register html*/
 #all-courses-list {
     padding: 0.5rem;

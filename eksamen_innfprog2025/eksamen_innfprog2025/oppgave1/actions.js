@@ -69,7 +69,7 @@ const getSingleEmployee = (index,adminbutton = false) => {
     ){
     
     const deleteButton = document.createElement ("button")
-    deleteButton.textContent = "remove employee"
+    deleteButton.textContent = "Slett ansatt"
     deleteButton.onclick = function() {removeEmployee(index) ;displayAllEmployees (adminbutton = true)} 
     article. appendChild (deleteButton)
     }
