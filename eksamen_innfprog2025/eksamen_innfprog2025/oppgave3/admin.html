@@ -10,31 +10,34 @@
     <script src="../oppgave1/register.js"></script>
     <link rel="stylesheet" href="style.css"></link>
     </head>
+    <header>
+        <h1 id="Hogskolen">Høgskolen JS</h1>
+    </header>
     <body>
         <main>
+            <h2>Legg til ansatt</h2>
             <!--COMMENT HERE-->
-            <article id="test">
             <form id="infoSheet">
                 <section>
                 <label>Fornavn</label>
-                <input required type="text" id="firstname">
+                <input required type="text" id="firstname" placeholder="firstname">
                 </section>
                 <section>
                 <label>Etternavn</label>
-                <input required type="text" id="lastname">
+                <input required type="text" id="lastname" placeholder="lastname">
                 </section>
                 <section>
                 <label>E-post</label>
-                <input required type="email" id="email">
+                <input required type="email" id="email" placeholder="email">
                 </section>
                 <section>
                 <label>Kontor</label>
-                <input required type="text" id="office">
+                <input required type="text" id="office" placeholder="office">
                 </section>
 
                 <section>
                 <label>Stilling</label>
-                <select required type="text" id="stilling"> 
+                <select required type="text" id="stilling" placeholder="Velg stilling"> 
     
                 <option value = "0">
                     Proffesor
@@ -56,20 +59,20 @@
 
                 <section>
                 <label>Kurs</label>
-                <input type="text" id="Kurs">
+                <input type="text" id="Kurs" placeholder="Kursansvar">
                 </section>
 
                 <button type="submit">Legg til ansatt</button>
             </form>
-            </article>
+            
             <!--COMMENT HERE-->
-            <article>
+            <article class="menu-sortBT">
                 <button onclick="displayAllEmployees ()">Vis alle ansatte</button>
                 <button onclick="filtersTeachers ()">Vis undervisere</button>
                 <button onclick="filterAdministration ()">Vis administrasjon</button>
             </article>
             <!--COMMENT HERE-->
-            <article>
+            <article class="menu-sortBT">
                 <button onclick="filterByPosition('Professor')">Professor</button>
                 <button onclick="filterByPosition('Dekan')">Dekan</button>
                 <button onclick="filterByPosition('Rektor')">Rektor</button>

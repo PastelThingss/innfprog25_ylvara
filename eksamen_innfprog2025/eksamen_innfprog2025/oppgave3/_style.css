@@ -12,7 +12,7 @@ main {
     padding: 1rem 5rem;
 }
 /*for the register html*/
-#Hogskolen {
+#Høgskolen {
     background-color: rgb(69, 154, 187);
     color: white;
     padding-block: 0.5rem;
@@ -23,6 +23,51 @@ main {
 
 /*for the admin html sheet for the fill out form*/
 /*form styling*/
+/*#infoSheet {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 0.5 1.2rem;
+    max-width: 1.2rem;
+    margin: 1.8rem;
+    align-items: center;
+    padding-block: 1rem;
+    
+}
+
+#infoSheet label {
+    text-align: left;
+    font-size: 1rem;
+    margin-block: 0.5rem;
+}
+
+#infoSheet button {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 50%;
+}*/
+/*#infoSheet {
+    display: flex;
+    flex-direction: row;
+    grid-row: row;
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid black ;
+}
+/*for the labels*/
+/*#infoSheet label,
+#infoSheet > * {
+    display: grid;
+    grid-template-columns: auto;
+}
+/*the input and the selcect*/
+/*#infoSheet input,
+#infoSheet select {
+    background-color: white;
+    border-radius: 4px ;
+}*/
+
 #infoSheet {
     display: flex;
     flex-direction: column;
@@ -30,33 +75,36 @@ main {
     gap: 1.5rem;
 }
 
-/*for section*/
+
 #infoSheet section {
     display: flex;
     flex-direction: row;
     justify-content: start;
 }
 
-/*for section + input,select and label*/
 #infoSheet section input,
 #infoSheet section select,
 #infoSheet section label {
     flex-basis: 40%;
     display: inline-block;
-    reset: all;
 }
 
-/*for the button on the form*/
+
+/*#infoSheet section select {
+
+}*/
+
 #infoSheet button {
     padding: 0.5rem;
     width: 50%;
     margin: 1rem;
-    background-color: rgb(194, 227, 241);
-    border-radius: 5px;
-    reset: all;
 }
 
-/*for the register html and admin html*/
+
+/*submit styling might be needed*/
+/*infosheets button styling*/
+
+/*for the register html*/
 .menu-sortBT button {
     all:unset;
     border: 1px rgb(68, 157, 192) solid;
@@ -66,19 +114,17 @@ main {
     background-color: rgb(194, 227, 241);
     margin-inline: 0.3rem;
     padding-inline: 0.5rem;
-    reset: all;
 }
 
 .menu-sortBT {
     display: flex;
     flex-flow: row wrap;
 }
-/*for the register html and the admin html*/
+/*for the register html*/
 #employees-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
     gap: 1rem;
-    padding-top: 1rem;
 }
 
 #employees-list article {
