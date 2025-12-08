@@ -1,96 +1,6 @@
-//have we over complicated this part again? Remember precise and to the point code not over overlycomplicated big arse boxses of code u squiggly brain.
-//okay retry time with fresh eyes on this that re-read the task again adn read-up on curtain infomartion for this part.
 //function 1
-//coruses dosent equal the kursansvar so remeber to fix courses so it means the same as kursansvar
-//THINK STRUCTUALLY SOUND BONES FOR THE CODE THINK OF A ATATOMIC SKELETON STRUCTURE AND NOT A ABOMINATION!!
-//REMEMBER TO COMMENT YOUR GAH DAMN CODE U TUFF NUGGET. ALSO LINKY LINK RIGHT NO FORGET ONLY REMEMBER!!:D
-//COMMENT HERE
-//function 2
-const displayAllEmployees = (adminbutton = false) => {
-    const container = document.getElementById ("employees-list")
-    container.innerHTML = ""
-    // const employessLength = employess.length
-    employees.forEach ((_, index) => {
-    container.appendChild (getSingleEmployee(index, adminbutton))
-    })
-    return container
-    // for (let index in employessLength)
-}
-//COMMENT HERE
-//function 3
-const filterByPosition = (positionName) => {
-    const container = document.getElementById ("employees-list")
-    container.innerHTML =""
-    employees.forEach ((employee, index) => {
-        if (employee.position === positionName) {
-            container.appendChild (getSingleEmployee (index))
-        }
-    })
-    return container
-}
-//COMMENT HERE
-//function 4
-const getAllCourses = () => {
-    const allCourses = []
-    const coursesHTML = document.getElementById ("all-courses-list")
-    const ul = document.createElement("ul")
-    employees.forEach (employees => {
-        employees.courses.forEach (course => {
-            if(!allCourses.includes (course)) {
-                const li = document.createElement ("li")
-                li.textContent = course
-                ul.appendChild (li)
-                allCourses.push (course)
-            }
-        })
-    })
-    coursesHTML.appendChild (ul)
-    return allCourses
-}
-//COMMENT HERE
-//function 5
-const filtersTeachers = () => {
-    const container = document.getElementById ("employees-list")
-    container.innerHTML = ""
-    employees.forEach((employee, index) => {
-        if (employee.position == "Professor" || employee.position === "Lektor") {
-            container.appendChild (getSingleEmployee (index))
-        }
-    })
-    return container
-}
-//COMMENT HERE
-//function 6
-const filterAdministration =() => {
-    const container = document.getElementById ("employees-list")
-    container.innerHTML = ""
-    employees.forEach ((employee,index) => {
-        if (employee.position == "Rektor" || employee.position === "Dekan") {
-        container.appendChild (getSingleEmployee(index))
-    }
-    })
-    return container
-}
-//COMMENT HERE
-//function 7
-const addEmployee = (newEmployee) => {
-    if (!newEmployee) {
-        return false
-    }
-    employees.push (newEmployee)
-    return employees
-}
-//COMMENT HERE
- //befire u move on fix written errrors or other writing mistakes in this part.
-//function 8 den egentlige åttende men er syvende?? se om du forstår eller hører hva han sier.
-const removeEmployee = (index) => {
-    if (!employees) {
-        return false
-    }
-    employees.splice (index, 1)
-    return employees
-}
-//COMMENT HERE
+//I added a appendchild to take from prior code (find better word, setece structure here)#OPPD1
+//#OPPD3 I added a Para so they would be affeted and have the same looking text, I also added the strong so the stilling and so on woul dbecome bold. so it would look more like the site.
 const getSingleEmployee = (index,adminbutton = false) => {
     const employee = employees[index]
     const article = document.createElement("article")
@@ -99,12 +9,10 @@ const getSingleEmployee = (index,adminbutton = false) => {
     const content = document.createTextNode (`${employee.firstname} ${employee.lastname}`)
     name.appendChild(content)
     article.appendChild (name)
-//okay as we do with code we try and faila and try agian. so game plan rn for youself is to try the use same code for more than one
-//part try to see if you can use the same code lines for more parts or adjust in a way to fit more parts than jsut one.
-//game plan for now so your squirrel brain can read this if you somehow forget yur train of tought. which is
-//is to try to put Para on psotions,office and email and the Tostring one to see of this fixes it. 
-// in simple terms copy courses chnage it to fit the needs of the other parts of the workers card yeah:) For hope this makes sense to yourself later we both can hope for that past me to future me
-//COMMENT HERE
+//which is is to try to put Para on psotions,office and email and the Tostring one to see of this fixes it. 
+// in simple terms copy courses chnage it to fit the needs of the other parts of the workers card
+//#OPPD1 added papa postions to see if it fixed my issue that my text would show up right in the roswer
+//#OPPD3 baseically doubled it by addin the strong for the box card on which info it was like stilling and then the stilling name came after in not old text.
     const positionPara = document.createElement ("p");
     const positionStrong = document.createElement ("strong")
     positionStrong.textContent = "Stilling:"
@@ -165,9 +73,98 @@ const getSingleEmployee = (index,adminbutton = false) => {
     deleteButton.onclick = function() {removeEmployee(index) ;displayAllEmployees (adminbutton = true)} 
     article. appendChild (deleteButton)
     }
-
-    //comment for myself: Are you mixing up things now? Like as a example is this courses or teachers, make
-    //sure you write about the correct or are not writing one thing and thinking/meaning the other one! double check yourself here!
+//this is for when we reloads the site the article will be reset as it was before we added the changes
     return article 
 } 
+//Added the function to get single employee and to get element from the employee list from the register js file #OPPD1
+//#OPPD3 I changed the get single employee into a display all employees and added for each into it to display all the different positions
+//function 2
+const displayAllEmployees = (adminbutton = false) => {
+    const container = document.getElementById ("employees-list")
+    container.innerHTML = ""
+    // const employessLength = employess.length
+    employees.forEach ((_, index) => {
+    container.appendChild (getSingleEmployee(index, adminbutton))
+    })
+    return container
+    // for (let index in employessLength)
+}
+//function 3
+//#OPPD1 added the filter postion name to filter the postions after the names of the postiositiobs we put in the register js
+const filterByPosition = (positionName) => {
+    const container = document.getElementById ("employees-list")
+    container.innerHTML =""
+    employees.forEach ((employee, index) => {
+        if (employee.position === positionName) {
+            container.appendChild (getSingleEmployee (index))
+        }
+    })
+    return container
+}
+//function 4
+//#OPPD1 added the get all courses to get the lsit over courses we have at the university
+//#OPPD3 added the append child from courses html the ul tag to make it take the look of it and be affected by the css(is this comment correct)
+const getAllCourses = () => {
+    const allCourses = []
+    const coursesHTML = document.getElementById ("all-courses-list")
+    const ul = document.createElement("ul")
+    employees.forEach (employees => {
+        employees.courses.forEach (course => {
+            if(!allCourses.includes (course)) {
+                const li = document.createElement ("li")
+                li.textContent = course
+                ul.appendChild (li)
+                allCourses.push (course)
+            }
+        })
+    })
+    coursesHTML.appendChild (ul)
+    return allCourses
+}
+//function 5
+//#OPPD1 added the filte teachers so you could filter the diffretnt types of teachers
+//#OPPD3 added the append child tag to make it shwo up/work with the html sheet
+const filtersTeachers = () => {
+    const container = document.getElementById ("employees-list")
+    container.innerHTML = ""
+    employees.forEach((employee, index) => {
+        if (employee.position == "Professor" || employee.position === "Lektor") {
+            container.appendChild (getSingleEmployee (index))
+        }
+    })
+    return container
+}
+//function 6
+//#OPPD1 added the filter adiminstartion to make it show up as a the filter button on top to be able to filter it out
+//#OPPD3 chnaged the enlish names to norwrgian to match the site so evertying on the site would be in noreegian an not a mix between enlgish and nrweian
+const filterAdministration =() => {
+    const container = document.getElementById ("employees-list")
+    container.innerHTML = ""
+    employees.forEach ((employee,index) => {
+        if (employee.position == "Rektor" || employee.position === "Dekan") {
+        container.appendChild (getSingleEmployee(index))
+    }
+    })
+    return container
+}
+//function 7
+//#OPPD1 added the opperntunity to add a new employye to teh employee stock? (re word this one)
+//#OPPD3 chnaged the splice into a push instead to better fit our needs in task 3
+const addEmployee = (newEmployee) => {
+    if (!newEmployee) {
+        return false
+    }
+    employees.push (newEmployee)
+    return employees
+}
+//function 8 
+//#oppd3 added the 8 function to be able to delete employes we want to delete in the admin html
+const removeEmployee = (index) => {
+    if (!employees) {
+        return false
+    }
+    employees.splice (index, 1)
+    return employees
+}
+
 

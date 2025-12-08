@@ -7,7 +7,7 @@
 
 // remember that stilling (postion) shall be its own list and that it shall be used in the indexsen from this list to explain which stilling (postion) one employye/worker (ansatt) has in the the overview(oversikt) over the employees/workers(ansatte). 
 // remember to make the list over all the courses available at the university.
-//COMMENT HERE
+//Added a const tag for the positions that are at the university #OPPD1
 const positions = [
     "Professor", //professor = 0
     "Rektor", //Rektor = 1
@@ -15,7 +15,7 @@ const positions = [
     "Vaktmester",//Vaktmester = 3
     "Lektor"//Lektor = 4
 ]
-//COMMENT HERE
+//Added a const tag for employees, so I would have a list here that I could use here and in the other files. #OPPD1
 const employees = [
     {
         firstname: "Eva", //r1

@@ -23,7 +23,28 @@ main {
 
 /*for the admin html sheet for the fill out form*/
 /*form styling*/
+/*#infoSheet {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 0.5 1.2rem;
+    max-width: 1.2rem;
+    margin: 1.8rem;
+    align-items: center;
+    padding-block: 1rem;
+    
+}
 
+#infoSheet label {
+    text-align: left;
+    font-size: 1rem;
+    margin-block: 0.5rem;
+}
+
+#infoSheet button {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 50%;
+}*/
 /*#infoSheet {
     display: flex;
     flex-direction: row;
@@ -34,19 +55,58 @@ main {
     background-color: transparent;
     border: 1px solid black ;
 }
-
-#infoSheet label,
+/*for the labels*/
+/*#infoSheet label,
 #infoSheet > * {
     display: grid;
     grid-template-columns: auto;
 }
-
-#infoSheet input,
+/*the input and the selcect*/
+/*#infoSheet input,
 #infoSheet select {
     background-color: white;
     border-radius: 4px ;
+}*/
+
+#infoSheet {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1.5rem;
 }
-*/
+
+#test {
+    width: 25%;
+}
+
+#infoSheet section {
+    display: flex;
+    flex-direction: row;
+}
+
+#infoSheet section input,
+#infoSheet section label {
+    flex-basis: 50%;
+    display: inline-block;
+}
+
+#infoSheet section select {
+    flex-basis: auto;
+}
+
+#infoSheet section select {
+}
+
+#infoSheet button {
+    
+    width: 50%;
+    margin: 1rem;
+}
+
+
+/*submit styling might be needed*/
+/*infosheets button styling*/
+
 /*for the register html*/
 .menu-sortBT button {
     all:unset;

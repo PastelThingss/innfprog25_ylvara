@@ -13,17 +13,29 @@
     <body>
         <main>
             <!--COMMENT HERE-->
+            <article id="test">
             <form id="infoSheet">
+                <section>
                 <label>Fornavn</label>
                 <input required type="text" id="firstname">
+                </section>
+                <section>
                 <label>Etternavn</label>
                 <input required type="text" id="lastname">
+                </section>
+                <section>
                 <label>E-post</label>
                 <input required type="email" id="email">
+                </section>
+                <section>
                 <label>Kontor</label>
                 <input required type="text" id="office">
+                </section>
+
+                <section>
                 <label>Stilling</label>
                 <select required type="text" id="stilling"> 
+    
                 <option value = "0">
                     Proffesor
                 </option>
@@ -40,10 +52,16 @@
                     Vaktmester
                 </option>
                 </select>   
+                </section>
+
+                <section>
                 <label>Kurs</label>
                 <input type="text" id="Kurs">
+                </section>
+
                 <button type="submit">Legg til ansatt</button>
             </form>
+            </article>
             <!--COMMENT HERE-->
             <article>
                 <button onclick="displayAllEmployees ()">Vis alle ansatte</button>
