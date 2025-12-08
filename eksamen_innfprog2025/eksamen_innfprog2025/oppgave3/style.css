@@ -116,6 +116,10 @@ main {
     padding-inline: 0.5rem;
 }
 
+#employees-list > article button:hover {
+    border-radius: 1px rgb(68, 147, 192) solid;
+}
+
 /*for the register html and the admin html*/
 /*this is for the styling of the course overview at the bottom of the site*/
 #all-courses-list {
