@@ -10,34 +10,38 @@
     <script src="../oppgave1/register.js"></script>
     <link rel="stylesheet" href="style.css"></link>
     </head>
-    <header>
-        <h1 id="Hogskolen">Høgskolen JS</h1>
-    </header>
+
     <body>
+    <header id="Hogskolen">
+        <h1>Høgskolen JS</h1>
+    </header>
         <main>
             <h2>Legg til ansatt</h2>
             <!--COMMENT HERE-->
             <form id="infoSheet">
                 <section>
                 <label>Fornavn</label>
-                <input required type="text" id="firstname" placeholder="firstname">
+                <input required type="text" id="firstname" placeholder="fornavn">
                 </section>
                 <section>
                 <label>Etternavn</label>
-                <input required type="text" id="lastname" placeholder="lastname">
+                <input required type="text" id="lastname" placeholder="etternavn">
                 </section>
                 <section>
                 <label>E-post</label>
-                <input required type="email" id="email" placeholder="email">
+                <input required type="email" id="email" placeholder="epost">
                 </section>
                 <section>
                 <label>Kontor</label>
-                <input required type="text" id="office" placeholder="office">
+                <input required type="text" id="office" placeholder="kontor">
                 </section>
 
                 <section>
-                <label>Stilling</label>
-                <select required type="text" id="stilling" placeholder="Velg stilling"> 
+                <label for="stilling">Stilling</label>
+                <select required id="stilling"> 
+                    <option value=""  disabled hidden selected >
+                        Velg stilling
+                    </option>
     
                 <option value = "0">
                     Proffesor
