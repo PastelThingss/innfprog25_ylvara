@@ -5,34 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    //COMMENT HERE
+    <!--COMMENT HERE-->
     <script src="../oppgave1/actions.js"></script>
     <script src="../oppgave1/register.js"></script>
     <link rel="stylesheet" href="style.css"></link>
     </head>
     <body>
+        <header id="Høgskolen">
+            <h1>Høgskolen JS</h1>
+        </header>
         <main>
             <!--COMMENT HERE-->
-            <article id="menu-sortBT">
+            <article class="menu-sortBT">
                 <button onclick="displayAllEmployees ()">Vis alle ansatte</button>
                 <button onclick="filtersTeachers ()">Vis undervisere</button>
                 <button onclick="filterAdministration ()">Vis administrasjon</button>
             </article>
             <!--COMMENT HERE-->
-            <article>
+            
+            <article class="menu-sortBT">
+                <p>Vis kun stilling:</p>
                 <button onclick="filterByPosition('Professor')">Professor</button>
                 <button onclick="filterByPosition('Dekan')">Dekan</button>
                 <button onclick="filterByPosition('Rektor')">Rektor</button>
                 <button onclick="filterByPosition('Vaktmester')">Vaktmester</button>
                 <button onclick="filterByPosition('Lektor')">Lektor</button>
             </article>
+            <h2>Ansatte</h2>
             <!--COMMENT HERE-->
             <article id="employees-list">
 
             </article>
             <article id="all-courses-list">
+                <h2>Kursoversikt</h2>
 
             </article>
+            <!--remember the overview of all the courses list with the bullet points next to the names-->
         </main>
     </body>
     <script>

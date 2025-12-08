@@ -9,187 +9,187 @@
 // remember to make the list over all the courses available at the university.
 //COMMENT HERE
 const positions = [
-    "Professor", 
-    "Rektor", 
-    "Dekan", 
-    "Vaktmester",
-    "Lektor"
+    "Professor", //professor = 0
+    "Rektor", //Rektor = 1
+    "Dekan", //Dekan = 2
+    "Vaktmester",//Vaktmester = 3
+    "Lektor"//Lektor = 4
 ]
 //COMMENT HERE
 const employees = [
     {
-        firstname: "Ola R1",
-        lastname: "Berg",
-        office: "C310",
-        email: "1ola.berg@hiof.no",
+        firstname: "Eva", //r1
+        lastname: "Lund",
+        office: "A101",
+        email: "eva.lund@hiof.no",
         position: positions[1],
         courses: []
     },
-
+//Dekaner
     {
-        firstname: "Ola d1",
-        lastname: "Berg",
-        office: "C310",
-        email: "2ola.berg@hiof.no",
+        firstname: "Tore", //d1
+        lastname: "Sørensen",
+        office: "B203",
+        email: "tore.sorensen@hiof.no",
         position: positions[2],
         courses: []
     },
         {
-        firstname: "Ola d2",
-        lastname: "Berg",
-        office: "C310",
-        email: "3ola.berg@hiof.no",
+        firstname: "Mai", //d2
+        lastname: "Nguyen",
+        office: "B204",
+        email: "mai.nguyen@hiof.no",
         position: positions[2],
         courses: []
     },
-
+//Vaktmestere
         {
-        firstname: "Ola v1",
-        lastname: "Berg",
-        office: "C310",
-        email: "4ola.berg@hiof.no",
+        firstname: "Per", //v1
+        lastname: "Johansen",
+        office: "V101",
+        email: "per.johansen@hiof.no",
         position: positions[3],
         courses: []
     },
     {
-        firstname: "Ola v2",
-        lastname: "Berg",
-        office: "C310",
-        email: "5ola.berg@hiof.no",
+        firstname: "Khalid", //v2
+        lastname: "Ali",
+        office: "V002",
+        email: "khalid.ali@hiof.no",
         position: positions[3],
         courses: []
     },
         {
-        firstname: "Ola v3",
-        lastname: "Berg",
-        office: "C310",
-        email: "6ola.berg@hiof.no",
+        firstname: "Siri", //v3
+        lastname: "Hansen",
+        office: "V003",
+        email: "siri.hansen@hiof.no",
         position: positions[3],
         courses: []
     },
-
+//Professorere
         {
-        firstname: "Ola p1",
+        firstname: "Ola", //p1
         lastname: "Berg",
         office: "C310",
-        email: "7ola.berg@hiof.no",
+        email: "ola.berg@hiof.no",
         position: positions[0],
-        courses: ["C1"]
+        courses: ["Programmering1, Webutikling"]
     },
     {
-        firstname: "Ola p2",
-        lastname: "Berg",
-        office: "C310",
-        email: "8ola.berg@hiof.no",
+        firstname: "Lina", //p2
+        lastname: "Eriksen",
+        office: "C312",
+        email: "Lina.Eriksen@hiof.no",
         position: positions[0],
-        courses: ["C2"]
+        courses: ["Algoritmer og datastruktur"]
     },
         {
-        firstname: "Ola p3",
-        lastname: "Berg",
-        office: "C310",
-        email: "9ola.berg@hiof.no",
+        firstname: "Jonas", //p3
+        lastname: "Muller",
+        office: "C313",
+        email: "jonas.muller@hiof.no",
         position: positions[0],
-        courses: ["C3"]
+        courses: ["Kunstig intelligens, Maskinlæring"]
     },
         {
-        firstname: "Ola p4",
-        lastname: "Berg",
-        office: "C310",
-        email: "10ola.berg@hiof.no",
+        firstname: "Ingrid", //p4
+        lastname: "Pettersen",
+        office: "C314",
+        email: "ingrid.pettersen@hiof.no",
         position: positions[0],
-        courses: ["C4"]
+        courses: ["Databaser"]
     },
     {
-        firstname: "Ola p5",
-        lastname: "Berg",
-        office: "C310",
-        email: "11ola.berg@hiof.no",
+        firstname: "Sara", //p5
+        lastname: "Ahmed",
+        office: "C315",
+        email: "sara.ahmed@hiof.no",
         position: positions[0],
-        courses: ["C5"]
+        courses: ["Operativesystemer"]
     },
-
+//lektorere
         {
-        firstname: "Ola L1",
-        lastname: "Berg",
-        office: "C310",
-        email: "12ola.berg@hiof.no",
+        firstname: "Henrik", //L1
+        lastname: "Nilsen",
+        office: "D401",
+        email: "henrik.nilse@hiof.no",
         position: positions[4],
-        courses: ["C6"]
+        courses: ["Webdesign, Responsiv utvikling"]
     },
             {
-        firstname: "Ola L2",
-        lastname: "Berg",
-        office: "C310",
-        email: "13ola.berg@hiof.no",
+        firstname: "Anne", //L2
+        lastname: "solberg",
+        office: "D402",
+        email: "Anne.Solberg@hiof.no",
         position: positions[4],
-        courses: ["C7"]
+        courses: ["Grunnleggende javaScript"]
     },
 
         {
-        firstname: "Ola L3",
-        lastname: "Berg",
-        office: "C310",
-        email: "14ola.berg@hiof.no",
+        firstname: "Trond", //L3
+        lastname: "Bakken",
+        office: "D403",
+        email: "Trond.Bakken@hiof.no",
         position: positions[4],
-        courses: ["C8"]
+        courses: ["UX-design"]
     },
     {
-        firstname: "Ola L4",
-        lastname: "Berg",
-        office: "C310",
-        email: "15ola.berg@hiof.no",
+        firstname: "Kari", //L4
+        lastname: "Holm",
+        office: "D404",
+        email: "Kari.Holm@hiof.no",
         position: positions[4],
-        courses: ["C9"]
+        courses: ["Frontend-utvikling, Css og design"]
     },
         {
-        firstname: "Ola L5",
-        lastname: "Berg",
-        office: "C310",
-        email: "16ola.berg@hiof.no",
+        firstname: "Eirik", //L5
+        lastname: "Larsen",
+        office: "D405",
+        email: "Eirik.Larsen@hiof.no",
         position: positions[4],
-        courses: ["C10"]
+        courses: ["Python for web"]
     },
 
         {
-        firstname: "Ola L6",
-        lastname: "Berg",
-        office: "C310",
-        email: "17ola.berg@hiof.no",
+        firstname: "Ida", //L6
+        lastname: "Martinsen",
+        office: "D406",
+        email: "Ida.Martinsen@hiof.no",
         position: positions[4],
-        courses: ["C11"]
+        courses: ["Systemutvikling"]
     },
     {
-        firstname: "Ola L7",
-        lastname: "Berg",
-        office: "C310",
-        email: "18ola.berg@hiof.no",
+        firstname: "Rune", //L7
+        lastname: "Karlsen",
+        office: "D407",
+        email: "Rune.Karlsen@hiof.no",
         position: positions[4],
-        courses: ["C12"]
+        courses: ["Objektorientert programmering"]
     },
         {
-        firstname: "Ola L8",
-        lastname: "Berg",
-        office: "C310",
-        email: "19ola.berg@hiof.no",
+        firstname: "Mona", //L8
+        lastname: "Strøm",
+        office: "D408",
+        email: "Mona.Strøm@hiof.no",
         position: positions[4],
-        courses: ["C13","2C3"]
+        courses: ["Datakommunikasjon"]
     },
         {
-        firstname: "Ola L9",
-        lastname: "Berg",
-        office: "C310",
-        email: "20ola.berg@hiof.no",
+        firstname: "Tom", //L9
+        lastname: "Rasmussen",
+        office: "D409",
+        email: "Tom.Rasmussen@hiof.no",
         position: positions[4],
-        courses: ["C14","2C2"]
+        courses: ["Datasikkerhet"]
     },
     {
-        firstname: "Ola L10",
-        lastname: "Berg",
-        office: "C310",
-        email: "21ola.berg@hiof.no",
+        firstname: "Julie", //L10
+        lastname: "Olsen",
+        office: "D410",
+        email: "Julie.Olsen@hiof.no",
         position: positions[4],
-        courses: ["C15","2C1"]
+        courses: ["Prosjektledelse"]
     }
 ]
 

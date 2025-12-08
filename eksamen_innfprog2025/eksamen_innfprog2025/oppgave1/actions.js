@@ -105,32 +105,56 @@ const getSingleEmployee = (index,adminbutton = false) => {
 //is to try to put Para on psotions,office and email and the Tostring one to see of this fixes it. 
 // in simple terms copy courses chnage it to fit the needs of the other parts of the workers card yeah:) For hope this makes sense to yourself later we both can hope for that past me to future me
 //COMMENT HERE
-    const positionPara = document.createElement ("p"); //have you mixed two things in this code part now? let it be and work on somthing else here and comeback and see if you can see your error. Present me thinks we might have mixed up in the way of is it this or that. Future me will tell me in the way of code stays or be chnaged
-    //positionPara.textContent = `position: ${positions[employee.position]}`;
-    positionPara.textContent = `position: ${employee.position}`
+    const positionPara = document.createElement ("p");
+    const positionStrong = document.createElement ("strong")
+    positionStrong.textContent = "Stilling:"
+    positionPara.appendChild (positionStrong)
+    const textspositionPara = document.createTextNode (` ${employee.position}`)
+    positionPara.appendChild (textspositionPara)
     article.appendChild (positionPara);
 
     const officePara = document.createElement ("p");
-    officePara.textContent = `office: ${employee.office}`
+    const officeStrong = document.createElement ("strong")
+    officeStrong.textContent = "Kontor:"
+    officePara.appendChild (officeStrong)
+    const textsofficePara = document.createTextNode (` ${employee.office}`)
+    officePara.appendChild (textsofficePara)
     article.appendChild (officePara);
+    
+    const emailPara = document.createElement("p")
+    const emailStrong = document.createElement("strong")
+    emailStrong.textContent = "E-post:"
+    emailPara.appendChild(emailStrong)
 
-    const emailPara = document.createElement ("p")
-    emailPara.textContent = `email: ${employee.email}`
-    article.appendChild (emailPara)
+    //link to make email into a actual clickable link
+    const emailLink = document.createElement("a")
+    emailLink.href = `mailto:${employee.email}`
+    emailLink.textContent = ` ${employee.email}`
+    emailPara.appendChild(emailLink)
+
+    article.appendChild(emailPara)
 
     const coursesPara = document.createElement ("p")
     if (employee.courses.length > 0) {
         
     //const courses = document.createElement ("p")
     const coursesTostring = employee.courses.join (", ")
-    coursesPara.textContent = `courses: ${coursesTostring}`
+    const coursesStrong = document.createElement ("strong")
+    coursesStrong.textContent = "Kursansvar:"
+    coursesPara.appendChild (coursesStrong) 
+    const textsCoursesPara = document.createTextNode (` ${coursesTostring}`)
+    coursesPara.appendChild (textsCoursesPara)
     article.appendChild (coursesPara)
     }
     else {
-        const coursesTostring = employee.courses.join (", ")
-        coursesPara.textContent = "courses: ingen kursansvar"
-        article.appendChild (coursesPara)
-    }
+        //const coursesTostring = employee.courses.join (", ")
+    const courseStrong = document.createElement ("strong")
+    courseStrong.textContent = "Kursansvar:"
+    coursesPara.appendChild (courseStrong)
+    const textsCoursesPara = document.createTextNode (" ingen kursansvar")
+    coursesPara.appendChild (textsCoursesPara)
+    article.appendChild (coursesPara)
+    };
 //COMMENT HERE
     if(
         adminbutton === true
