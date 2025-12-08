@@ -47,6 +47,7 @@ main {
     flex-basis: 40%;
     display: inline-block;
     reset: all;
+    background-color: white;
 }
 
 /*for the button on the form in admin html*/
