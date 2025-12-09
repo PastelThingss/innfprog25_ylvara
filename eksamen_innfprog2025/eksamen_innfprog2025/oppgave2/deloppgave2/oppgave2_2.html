@@ -8,69 +8,43 @@
 <body>
     <script>
         //Denne koden finner det lengste ordet i en liste med ord.
-        function start() {
-            let ordListe = ["kode", "programmering", "design", "data", "variabel"];
-
+        //tenker å ta ut ordliste fra function og putte den som en const i stedet. for den trenger ikke være inni denne
+        //endret let til const når jeg tok ordlisten ut av finner lengste ord
+        const ordListe = ["kode", "programmering", "design", "data", "variabel"];
+            
+        //lurer på om det er bedre og ta ut function finn lengte ord i start pga det er unødvendig nesting. men vet ikke om ddet er kortere per say men mer  "riktig"/pent
+        //tenker at finn legnste ord kan bli tatt ut av start trenger ikke en fucntion i en function. og bruker reduce her sdien det er mer moderne måte og skrive dette på
             function finnLengsteOrd(liste) {
-                let lengste = "";
-                for (let i = 0; i < liste.length; i++) {
-                    let ord = liste[i];
-                    if (ord.length > lengste.length) {
-                        lengste = ord;
-                    } else {
-                        // gjør ingenting
+                return lsite.reduce ((engste, ord) =>
+                ord.length > lengste.lenght ? ord : lengste, "");
+                //bruke return i stedet for let,for,let,if. holder med return trenger ikke alt det andre i denne delen her
+                        //fjerner else for den gjør ikke noe og kan fjernes. 
                     }
-                }
-                return lengste;
-            }
-
-            function skrivUtResultat() {
-                let resultat = finnLengsteOrd(ordListe);
-                console.log("Det lengste ordet i listen er: " + resultat);
-            }
-
-            skrivUtResultat();
-        }
-
-        start();
-
+    
+//dobbel sjekk webtricks men trenger du skriv ut resulat her elelr er den overflødig? den er overflødig mener jeg så langt.
+//bruke console log her i stedet for å slippe og hha en extra fucntion og kan heller kalel den direkte istedet fra fucntion finn legnste ord
+        console.log ("Det lengste ordet i lsiten er: " + finnLengsteord(ordListe));
         //Denne koden regner ut gjennomsnittsalderen til en gruppe personer.
-        function startProgram() {
-            let personer = [
+        //flytter const personer ut av funskjoner start program for det er unødvendig å ha den i denne function
+        //og tenker og gjøre let personer til en const personer
+        const personer = [
                 { navn: "Ola", alder: 24 },
                 { navn: "Kari", alder: 32 },
                 { navn: "Per", alder: 29 },
                 { navn: "Anne", alder: 41 }
             ];
+            
+//tenker på om jeg kan kombinere hent alder og regn ut gjennomsnitt på en god måte som gjør fden kortere og enklere. comeback to this after du ahr titted på webtricks og infroprog
+//med en felles function og bruke const i stedet for let og for
+//tenker å prøve å kombienre regnutgjennsomsitt med hentralder. og her kan vi bruke const, return og mest sannsyligvis map for å ehnte ut alder og reduen
 
-            function hentAldre(liste) {
-                let alderArray = [];
-                for (let i = 0; i < liste.length; i++) {
-                    let person = liste[i];
-                    alderArray.push(person.alder);
-                }
-                return alderArray;
+            function regnUtGjennomsnitt(personlist) {
+                const aldri = personlsite.map(person) => perosn.aler
+                consr sun= aldrei.reduce(8tota,ader) => toal + aler, 0):
+                rerub sumn / adri.lengt;
             }
 
-            function regnUtGjennomsnitt(alderArray) {
-                let sum = 0;
-                for (let i = 0; i < alderArray.length; i++) {
-                    sum = sum + alderArray[i];
-                }
-                let gjennomsnitt = sum / alderArray.length;
-                return gjennomsnitt;
-            }
-
-            function visResultat() {
-                let alderArray = hentAldre(personer);
-                let gjennomsnitt = regnUtGjennomsnitt(alderArray);
-                console.log("Gjennomsnittsalderen er " + gjennomsnitt);
-            }
-
-            visResultat();
-        }
-
-        startProgram();
-    </script>
+//tenker å bruke console log her i stedet for denen funskjoen og bytte den og med en console log
+            consule.log("gjenomsnitalderen er" + regnUtGjenomsnitts(personeer)):
 </body>
 </html>
