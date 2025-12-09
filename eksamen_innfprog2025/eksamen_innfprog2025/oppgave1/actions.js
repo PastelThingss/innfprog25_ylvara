@@ -1,6 +1,6 @@
 //function 1
 //I added a appendChild to take from prior code (find better word, sentence structure here)#OPPD1
-//#OPPD3 I added a Para so they would be affeted and have the same looking text, I also added the strong so the stilling and so on woul dbecome bold. so it would look more like the site.
+//#OPPD3 I added a Para so they would be affected and have the same looking text, I also added the strong so the stilling and so on would become bold. so it would look more like the site.
 const getSingleEmployee = (index,adminbutton = false) => {
     const employee = employees[index]
     const article = document.createElement("article")
@@ -12,7 +12,7 @@ const getSingleEmployee = (index,adminbutton = false) => {
 //which is is to try to put Para on positions,office and email and the Tostring one to see of this fixes it. 
 // in simple terms copy courses change it to fit the needs of the other parts of the workers card
 //#OPPD1 added papa positions to see if it fixed my issue that my text would show up right in the browser
-//#OPPD3 baseically doubled it by adding the strong for the box card on which info it was like stilling and then the stilling name came after in not old text.
+//#OPPD3 basically doubled it by adding the strong for the box card on which info it was like stilling and then the stilling name came after in not old text.
     const positionPara = document.createElement ("p");
     const positionStrong = document.createElement ("strong")
     positionStrong.textContent = "Stilling:"
@@ -82,15 +82,15 @@ const getSingleEmployee = (index,adminbutton = false) => {
 const displayAllEmployees = (adminbutton = false) => {
     const container = document.getElementById ("employees-list")
     container.innerHTML = ""
-    // const employessLength = employess.length
+    // const employeesLength = employess.length
     employees.forEach ((_, index) => {
     container.appendChild (getSingleEmployee(index, adminbutton))
     })
     return container
-    // for (let index in employessLength)
+    // for (let index in employeesLength)
 }
 //function 3
-//#OPPD1 added the filter postion name to filter the postions after the names of the postiositiobs we put in the register js
+//#OPPD1 added the filter position name to filter the positions after the names of the positions we put in the register js
 const filterByPosition = (positionName) => {
     const container = document.getElementById ("employees-list")
     container.innerHTML =""
