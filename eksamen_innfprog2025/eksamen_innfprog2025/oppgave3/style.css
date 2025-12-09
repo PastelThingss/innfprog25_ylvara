@@ -66,6 +66,7 @@ main {
 
 #infoSheet button:hover {
     border-radius: 5px rgb(68, 147, 192) solid;
+    background-color: rgb(133, 191, 220);
 }
 
 /*for the register html and admin html*/
@@ -83,6 +84,7 @@ main {
 
 .menu-sortBT button:hover {
     border-radius: 5px rgb(68, 147, 192) solid;
+    background-color: rgb(133, 191, 220);
 }
 /*for the general layout*/
 .menu-sortBT {
@@ -118,6 +120,7 @@ main {
 
 #employees-list > article button:hover {
     border-radius: 5px rgb(68, 147, 192) solid;
+    background-color: rgb(133, 191, 220);
 }
 
 /*for the register html and the admin html*/
