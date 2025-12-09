@@ -1,5 +1,5 @@
 //function 1
-//I added a appendchild to take from prior code (find better word, setece structure here)#OPPD1
+//I added a appendChild to take from prior code (find better word, sentence structure here)#OPPD1
 //#OPPD3 I added a Para so they would be affeted and have the same looking text, I also added the strong so the stilling and so on woul dbecome bold. so it would look more like the site.
 const getSingleEmployee = (index,adminbutton = false) => {
     const employee = employees[index]
@@ -9,10 +9,10 @@ const getSingleEmployee = (index,adminbutton = false) => {
     const content = document.createTextNode (`${employee.firstname} ${employee.lastname}`)
     name.appendChild(content)
     article.appendChild (name)
-//which is is to try to put Para on psotions,office and email and the Tostring one to see of this fixes it. 
-// in simple terms copy courses chnage it to fit the needs of the other parts of the workers card
-//#OPPD1 added papa postions to see if it fixed my issue that my text would show up right in the roswer
-//#OPPD3 baseically doubled it by addin the strong for the box card on which info it was like stilling and then the stilling name came after in not old text.
+//which is is to try to put Para on positions,office and email and the Tostring one to see of this fixes it. 
+// in simple terms copy courses change it to fit the needs of the other parts of the workers card
+//#OPPD1 added papa positions to see if it fixed my issue that my text would show up right in the browser
+//#OPPD3 baseically doubled it by adding the strong for the box card on which info it was like stilling and then the stilling name came after in not old text.
     const positionPara = document.createElement ("p");
     const positionStrong = document.createElement ("strong")
     positionStrong.textContent = "Stilling:"
@@ -102,7 +102,7 @@ const filterByPosition = (positionName) => {
     return container
 }
 //function 4
-//#OPPD1 added the get all courses to get the lsit over courses we have at the university
+//#OPPD1 added the get all courses to get the li to sit over courses we have at the university
 //#OPPD3 added the append child from courses html the ul tag to make it take the look of it and be affected by the css(is this comment correct)
 const getAllCourses = () => {
     const allCourses = []
@@ -122,8 +122,8 @@ const getAllCourses = () => {
     return allCourses
 }
 //function 5
-//#OPPD1 added the filte teachers so you could filter the diffretnt types of teachers
-//#OPPD3 added the append child tag to make it shwo up/work with the html sheet
+//#OPPD1 added the filter teachers so you could filter the different types of teachers
+//#OPPD3 added the append child tag to make it show up/work with the html sheet
 const filtersTeachers = () => {
     const container = document.getElementById ("employees-list")
     container.innerHTML = ""
@@ -135,8 +135,8 @@ const filtersTeachers = () => {
     return container
 }
 //function 6
-//#OPPD1 added the filter adiminstartion to make it show up as a the filter button on top to be able to filter it out
-//#OPPD3 chnaged the enlish names to norwrgian to match the site so evertying on the site would be in noreegian an not a mix between enlgish and nrweian
+//#OPPD1 added the filter administration to make it show up as a the filter button on top to be able to filter it out
+//#OPPD3 changed the english names to norwegian to match the site so everything on the site would be in norwegian an not a mix between english and norwegian
 const filterAdministration =() => {
     const container = document.getElementById ("employees-list")
     container.innerHTML = ""
@@ -148,8 +148,8 @@ const filterAdministration =() => {
     return container
 }
 //function 7
-//#OPPD1 added the opperntunity to add a new employye to teh employee stock? (re word this one)
-//#OPPD3 chnaged the splice into a push instead to better fit our needs in task 3
+//#OPPD1 added the opportunity to add a new employee to teh employee stock? (re word this one)
+//#OPPD3 changed the splice into a push instead to better fit our needs in task 3
 const addEmployee = (newEmployee) => {
     if (!newEmployee) {
         return false
@@ -158,7 +158,7 @@ const addEmployee = (newEmployee) => {
     return employees
 }
 //function 8 
-//#oppd3 added the 8 function to be able to delete employes we want to delete in the admin html
+//#oppd3 added the 8 function to be able to delete employees we want to delete in the admin html
 const removeEmployee = (index) => {
     if (!employees) {
         return false
