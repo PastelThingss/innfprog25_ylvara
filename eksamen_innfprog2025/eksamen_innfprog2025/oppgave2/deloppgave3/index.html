@@ -1,11 +1,14 @@
+<!--When I went into this file I was not expecting to find any sort of code in here, and was quite surprised to find all the code necessary to make 
+the site look and behave how you wanted it to behave when we would have done the code ourselves-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery</title>
-    <!--is Jquery already linked up here or am I trippin?-->
-<!--src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"--><!--that was what was in the script code before I added the copy code from Jquery minfied online-->
+<!--Jquery makes it easier to work with HTML documents, create animations and handle events and also change/manipulate the DOM-->
+<!--src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"-->
+<!--that was what was in the script code before I added the copy code from Jquery minfied online-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <style>
         body {
@@ -29,9 +32,11 @@
         <li>Skisser og prototyper</li>
         <li>Kommunikasjonsdesign</li>
     </ul>
-
+<!--The script here is for connecting the css and ul and li together. so you would get the every other line is 50px height and have the grey background color-->
     <script>
+//there is two segments in this chain which is the css and the height, they both are applied when the list element is a odd number
         $('li:odd').css('background-color', '#d3d3d3').height(50);
+//this one is for when li is clicked it will make the pop up alert of the title you clicked for example Programmering 1
         $('li').on('click', function() {
             alert($(this).text());
         }  );
