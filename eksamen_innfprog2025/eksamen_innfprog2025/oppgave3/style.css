@@ -4,13 +4,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
 * {
     box-sizing: border-box;
 }
-
-/*main {
-    padding: 1rem 5rem;
+main {
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 /*for the register html and admin html*/
 /*styling for the header*/
@@ -22,7 +21,6 @@ body {
     margin-bottom: 1rem;
     width: 100%;
 }
-
 /*for the admin html sheet for the fill out form*/
 /*form styling*/
 #infoSheet {
@@ -32,42 +30,20 @@ body {
     gap: 1.5rem;
 }
 
-/*for section*/
-#infoSheet section {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
+#infoSheet input, select {
+   background-color: white;
 }
 
-/*for section + input,select and label*/
-#infoSheet section input,
-#infoSheet section select,
-#infoSheet section label {
-    flex-basis: 40%;
-    display: inline-block;
-    padding: 0.2rem;
-}
-
-#infoSheet section select,
-#infoSheet section input {
-    background-color: white;
-}
-
-/*for the button on the form in admin html*/
 #infoSheet button {
-    padding: 0.5rem;
-    width: 50%;
-    margin: 1rem;
     background-color: rgb(194, 227, 241);
     border: 1px rgb(68, 157, 192) solid;
     border-radius: 5px;
+    padding: 0.5rem;
 }
-
 #infoSheet button:hover {
     border-radius: 5px rgb(68, 147, 192) solid;
     background-color: rgb(133, 191, 220);
 }
-
 /*for the register html and admin html*/
 /*for the button in the menu at the top*/
 .menu-sortBT button {
@@ -80,7 +56,6 @@ body {
     margin-inline: 0.3rem;
     padding-inline: 0.5rem;
 }
-
 .menu-sortBT button:hover {
     border-radius: 5px rgb(68, 147, 192) solid;
     background-color: rgb(133, 191, 220);
@@ -94,16 +69,16 @@ body {
 /*this is for the styling of the employee list and how it behaves*/
 #employees-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
     gap: 1rem;
     padding-top: 1rem;
 }
-
 #employees-list article {
     border: 1.5px solid rgb(207, 207, 207);
-    padding: 1rem;
     background-color: white;
     border-radius: 5px;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 #employees-list > article button {
@@ -117,9 +92,8 @@ body {
     padding-inline: 0.5rem;
 }
 
-#employees-list > article button:hover {
-    border-radius: 5px rgb(68, 147, 192) solid;
-    background-color: rgb(133, 191, 220);
+#employees-list > article button {
+    background-color: background-color: rgb(133, 191, 220);;
 }
 
 /*for the register html and the admin html*/
@@ -127,18 +101,24 @@ body {
 #all-courses-list {
     padding: 0.5rem;
 }
-
 #all-courses-list ul {
     padding: 0.5rem;
 }
-
 #all-courses-list li {
     padding: 0.5rem;
 }
-
-/*@media screen and (min-width:508px) {
+@media screen and (min-width:508px) {
 body {
-    padding: 1 rem 1 rem;
+    padding: 0;
 }
-}*/
-
+}
+@media screen and (min-width:526px) {
+body {
+    padding: 0;
+}
+}
+@media screen and (min-width:1254px) {
+body {
+    padding: 0;
+}
+}
