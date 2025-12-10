@@ -31,7 +31,7 @@ main {
 }
 
 #infoSheet input, select {
-   background-color: white;
+    background-color: white;
 }
 
 #infoSheet button {
@@ -93,7 +93,7 @@ main {
 }
 
 #employees-list > article button {
-    background-color: background-color: rgb(133, 191, 220);;
+    background-color: rgb(133, 191, 220);
 }
 
 /*for the register html and the admin html*/
