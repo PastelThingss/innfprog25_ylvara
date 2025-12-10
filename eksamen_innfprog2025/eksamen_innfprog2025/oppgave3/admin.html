@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,113 +9,103 @@
     <!--added the script tag here that connects both js files to this html file without having to move them out of mappedel 1-->
     <script src="../oppgave1/actions.js"></script>
     <script src="../oppgave1/register.js"></script>
-    <link rel="stylesheet" href="style.css"></link>
-    </head>
+    <link rel="stylesheet" href="style.css">
+    </link>
+</head>
 
-    <body>
+<body>
     <header id="Hogskolen">
         <h1>Høgskolen JS</h1>
     </header>
-        <main>
-            <h2>Legg til ansatt</h2>
-            <!--this here is the form sheet itself where you can fill out the information needed on the employee card for the new employee
+    <main>
+        <h2>Legg til ansatt</h2>
+        <!--this here is the form sheet itself where you can fill out the information needed on the employee card for the new employee
             and is has a id connected to the css to make it look like the videos-->
-            <form id="infoSheet">
-                <section>
+        <form id="infoSheet">
+            <section>
                 <label>Fornavn</label>
                 <input required type="text" id="firstname" placeholder="fornavn">
-                </section>
-                <section>
+            </section>
+            <section>
                 <label>Etternavn</label>
                 <input required type="text" id="lastname" placeholder="etternavn">
-                </section>
-                <section>
+            </section>
+            <section>
                 <label>E-post</label>
                 <input required type="email" id="email" placeholder="epost">
-                </section>
-                <section>
+            </section>
+            <section>
                 <label>Kontor</label>
                 <input required type="text" id="office" placeholder="kontor">
-                </section>
+            </section>
 
-                <section>
-                    <label>Stilling</label>
-                    <select required id="stilling"> 
-                        <option value="" disabled selected hidden>Velg stilling</option>
-                        <option value = "0">
-                            Proffesor
-                        </option>
-                        <option value = "2">
-                            Dekan
-                        </option>
-                        <option value = "1">
-                            Rektor
-                        </option>
-                        <option value = "4">
-                            Lektor
-                        </option>
-                        <option value = "3">
-                            Vaktmester
-                        </option>
-                    </select>   
-                </section>
+            <section>
+                <label>Stilling</label>
+                <select required id="stilling">
+                    <!--this is only to have a placeholder text when the page loads-->
+                    <option value="" disabled selected >Velg stilling</option>
+                    <option value="0">
+                        Proffesor
+                    </option>
+                    <option value="2">
+                        Dekan
+                    </option>
+                    <option value="1">
+                        Rektor
+                    </option>
+                    <option value="4">
+                        Lektor
+                    </option>
+                    <option value="3">
+                        Vaktmester
+                    </option>
+                </select>
+            </section>
 
-                <section>
+            <section>
                 <label>Kurs</label>
                 <input type="text" id="Kurs" placeholder="Kursansvar">
-                </section>
+            </section>
 
-                <button type="submit">Legg til ansatt</button>
-            </form>
-            <!--here is all the buttons for the top menu as to show all employees, teachers and the administration. both articles has the same css class 
+            <button type="submit">Legg til ansatt</button>
+        </form>
+        <!--here is all the buttons for the top menu as to show all employees, teachers and the administration. both articles has the same css class 
             connected so they would look the same and behave the same-->
-            <h2>Ansatte</h2>
-            <article class="menu-sortBT">
-                <button onclick="displayAllEmployees ()">Vis alle ansatte</button>
-                <button onclick="filtersTeachers ()">Vis undervisere</button>
-                <button onclick="filterAdministration ()">Vis administrasjon</button>
-            </article>
-            <!--this is all the buttons for the menu at the top where you can filter between employee positions-->
-            <article class="menu-sortBT">
-                <button onclick="filterByPosition('Professor')">Professor</button>
-                <button onclick="filterByPosition('Dekan')">Dekan</button>
-                <button onclick="filterByPosition('Rektor')">Rektor</button>
-                <button onclick="filterByPosition('Vaktmester')">Vaktmester</button>
-                <button onclick="filterByPosition('Lektor')">Lektor</button>
-            </article>
-            <!--this article has been given the same id as in the js so the js data will be copied over her e in html and show up on the website-->
-            <article id="employees-list">
+        <h2>Ansatte</h2>
 
-            </article>
-            <!--Here I have given the article the same id as in the js so the layout and behavior of the js will be put in/activated in here in the html-->
-            <article id="all-courses-list">
-                <h2>Kursoversikt</h2>
+        <!--this article has been given the same id as in the js so the js data will be copied over here in html and show up on the website-->
+        <article id="employees-list">
 
-            </article>
-        </main>
-    </body>
-    <script>
-//This is how I set up the button for showing all employees with the admin button = true so when it is pressed it will then show the list over all the employees in the university
-        displayAllEmployees (adminbutton = true)
-        getAllCourses ()
+        </article>
+        <!--Here I have given the article the same id as in the js so the layout and behavior of the js will be put in/activated in here in the html-->
+        <article id="all-courses-list">
+            <h2>Kursoversikt</h2>
 
-        const form = document.getElementById ("infoSheet")
+        </article>
+    </main>
+</body>
+<script>
+    //This is how I set up the list for showing all employees with the admin button = true so when it is pressed it will then delete the given employee and show the again list 
+    displayAllEmployees(adminbutton = true)
+    getAllCourses()
 
-        form.onsubmit = function (event) {
-            event.preventDefault()
- //this part is for the employee card on the site to show their names,mail,office,position and their courses. In the correct order we want these to show up on the cards.
+    const form = document.getElementById("infoSheet")
+//function to stop the form from reloading the page
+    form.onsubmit = function (event) {
+        event.preventDefault()
+        //this part is for the employee card on the site to show their names,mail,office,position and their courses. In the correct order we want these to show up on the new card.
 
-            const firstname = event.target.elements [0] .value
-            const lastname = event.target.elements [1] .value
-            const email = event.target.elements [2] .value
-            const office = event.target.elements [3] .value
-            const position = Number (event.target.elements [4] .value)
-            const courses = event.target.elements [5] .value .split (",")
-            if (courses.length === 1 && courses [0] === "") {
-                courses. pop ()
-            }
+        const firstname = event.target.elements[0].value
+        const lastname = event.target.elements[1].value
+        const email = event.target.elements[2].value
+        const office = event.target.elements[3].value
+        const position = Number(event.target.elements[4].value)
+        const courses = event.target.elements[5].value.split(",")
+        if (courses.length === 1 && courses[0] === "") {
+            courses.pop()
+        }
 
-            const employee =     {
+        const employee = {
             firstname: firstname,
             lastname: lastname,
             office: office,
@@ -122,11 +113,12 @@
             position: positions[position],
             courses: courses
 
-            }
-//This here is to make it so when you click the add employee button (legg til ansat) it will actually add what you wrote in the fill out form as a new employee card on the website.
-            addEmployee (employee)
-            displayAllEmployees (adminbutton = true)
-            form.reset ()
         }
-    </script>
+        //This here is to make it so when you click the add employee button (legg til ansat) it will actually add what you wrote in the fill out form as a new employee card on the website.
+        addEmployee(employee)
+        displayAllEmployees(adminbutton = true)
+        form.reset()
+    }
+</script>
+
 </html>
