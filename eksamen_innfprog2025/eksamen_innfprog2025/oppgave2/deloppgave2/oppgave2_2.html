@@ -1,3 +1,5 @@
+<!--The comments here will be written in Norwegian as to match the codes language, so there might be more written errors 
+cause my writing skills are worse in correct grammer in Norwegian compared to English-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,26 +9,25 @@
 </head>
 <body>
     <script>
-        //Denne koden finner det lengste ordet i en liste med ord.
-        //tenker å ta ut ordliste fra function og putte den som en const i stedet. for den trenger ikke være inni denne
-        //endret let til const når jeg tok ordlisten ut av finner lengste ord
+//for den trenger ikke være inni denne
+//endret let til const når jeg tok ordlisten ut av finner lengste ord
         const ordListe = ["kode", "programmering", "design", "data", "variabel"];
             
-        //lurer på om det er bedre og ta ut function finn lengte ord i start pga det er unødvendig nesting. men vet ikke om ddet er kortere per say men mer  "riktig"/pent
-        //tenker at finn legnste ord kan bli tatt ut av start trenger ikke en fucntion i en function. og bruker reduce her sdien det er mer moderne måte og skrive dette på
+//tok ut function finn lengte ord i start pga det er unødvendig nesting. 
+//tok ut finn legnste ord fra start fordi det trenger ikke å være en fucntion i en function. Jeg fjernet også start function helt for den var ikke nødvedig og ha
+//Bruker reduce her sdien det er mer moderne måte og skrive kode på/dette på (sematiks moderne)
             function finnLengsteOrd(liste) {
                 return liste.reduce ((lengste, ord) =>
                 ord.length > lengste.length ? ord : lengste, "");
-                //bruke return i stedet for let,for,let,if. holder med return trenger ikke alt det andre i denne delen her
-                        //fjerner else for den gjør ikke noe og kan fjernes. 
+//bruker return i stedet for let,for,let,if fordi det holder med return trenger ikke alt det andre i denne delen her/koden her
+//fjerner else for den gjør ikke noe og kan fjernes. Har ikke noe hensyn
                     }
     
-//dobbel sjekk webtricks men trenger du skriv ut resulat her elelr er den overflødig? den er overflødig mener jeg så langt.
-//bruke console log her i stedet for å slippe og hha en extra fucntion og kan heller kalel den direkte istedet fra fucntion finn legnste ord
+// vyttet resulat her med console log i steden for å slippe å ha en extra fucntion til og da kan den heller kalle den direkye i stedet fra functionen finn lengste ord
         console.log ("Det lengste ordet i liste er: " + finnLengsteOrd(ordListe));
-        //Denne koden regner ut gjennomsnittsalderen til en gruppe personer.
-        //flytter const personer ut av funskjoner start program for det er unødvendig å ha den i denne function
-        //og tenker og gjøre let personer til en const personer
+//Denne koden regner ut gjennomsnittsalderen til en gruppe personer.
+//flytter const personer ut av funskjoner start program for det er unødvendig å ha den i denne function
+//og gjøre let personer til en const personer, for det er en enklere og mer mordeerne måte å skirve det på
         const personer = [
                 { navn: "Ola", alder: 24 },
                 { navn: "Kari", alder: 32 },
@@ -34,9 +35,9 @@
                 { navn: "Anne", alder: 41 }
             ];
             
-//tenker på om jeg kan kombinere hent alder og regn ut gjennomsnitt på en god måte som gjør fden kortere og enklere. comeback to this after du ahr titted på webtricks og infroprog
+//kombinere hent alder og regn ut gjennomsnitt for å gjøre koden kortere og slippe og ha to functions når de kan kjøre sp å samme. 
 //med en felles function og bruke const i stedet for let og for
-//tenker å prøve å kombienre regnutgjennsomsitt med hentralder. og her kan vi bruke const, return og mest sannsyligvis map for å ehnte ut alder og reduen
+//kombienrer regnutgjennsomsitt med hentralder. og her kan vi bruke const, return og mest sannsyligvis map for å ehnte ut alder og reduen for å korte ned koden enda litt til
 
             function regnUtGjennomsnitt(personlist) {
                 const alder = personlist.map((person) => person.alder)
@@ -44,7 +45,7 @@
                 return sum / alder.length;
             }
 
-//tenker å bruke console log her i stedet for denen funskjoen og bytte den og med en console log
+//bruker console log her i stedet for denen funskjoen og bytte den og med en console log
             console.log("gjenomsnitalderen er" + regnUtGjennomsnitt(personer))
     </script>
 </body>

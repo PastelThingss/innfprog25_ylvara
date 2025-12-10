@@ -1,4 +1,5 @@
-//I prefer writing code and comments in English even dho the task we have got is in Norwegian. I might use some of the names or words you used in the videos as names for some code functions and so on.
+//I prefer writing code and comments in English even dho the task we have got is in Norwegian. I might use some of the names or 
+// words you used in the videos as names for some code functions and so on.
 // Since some of them will be weird to translate to english and the site itself are gonna show its content in Norwegian.
 
 //this file shall include the data structure of the workers(ansatte) at a university. one worker shall have a last name and a first name. which office they are at(sitting at), also which work

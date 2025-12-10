@@ -55,7 +55,7 @@ const getSingleEmployee = (index,adminbutton = false) => {
     article.appendChild (coursesPara)
     }
     else {
-        //const coursesTostring = employee.courses.join (", ")
+        //const coursesTostring = employee.courses.join (", ") (remove this!!)
     const courseStrong = document.createElement ("strong")
     courseStrong.textContent = "Kursansvar:"
     coursesPara.appendChild (courseStrong)
@@ -63,7 +63,7 @@ const getSingleEmployee = (index,adminbutton = false) => {
     coursesPara.appendChild (textsCoursesPara)
     article.appendChild (coursesPara)
     };
-//COMMENT HERE
+//COMMENT HERE (Is this one needed or ccan it be removed?)
     if(
         adminbutton === true
     ){
@@ -82,12 +82,12 @@ const getSingleEmployee = (index,adminbutton = false) => {
 const displayAllEmployees = (adminbutton = false) => {
     const container = document.getElementById ("employees-list")
     container.innerHTML = ""
-    // const employeesLength = employess.length
+    // const employeesLength = employess.length (can this be removed now?)
     employees.forEach ((_, index) => {
     container.appendChild (getSingleEmployee(index, adminbutton))
     })
     return container
-    // for (let index in employeesLength)
+    // for (let index in employeesLength) (can it be removed)
 }
 //function 3
 //#OPPD1 added the filter position name to filter the positions after the names of the positions we put in the register js

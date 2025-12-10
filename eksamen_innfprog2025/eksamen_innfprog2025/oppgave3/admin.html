@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <!--COMMENT HERE-->
+    <!--added the script tag here that connects both js files to this html file without having to move them out of mappedel 1-->
     <script src="../oppgave1/actions.js"></script>
     <script src="../oppgave1/register.js"></script>
     <link rel="stylesheet" href="style.css"></link>
@@ -17,7 +17,8 @@
     </header>
         <main>
             <h2>Legg til ansatt</h2>
-            <!--COMMENT HERE-->
+            <!--this here is the form sheet itself where you can fill out the information needed on the employee card for the new employee
+            and is has a id connected to the css to make it look like the videos-->
             <form id="infoSheet">
                 <section>
                 <label>Fornavn</label>
@@ -65,15 +66,15 @@
 
                 <button type="submit">Legg til ansatt</button>
             </form>
-            
-            <!--COMMENT HERE-->
+            <!--here is all the buttons for the top menu as to show all employees, teachers and the administration. both articles has the same css class 
+            connected so they would look the same and behave the same-->
             <h2>Ansatte</h2>
             <article class="menu-sortBT">
                 <button onclick="displayAllEmployees ()">Vis alle ansatte</button>
                 <button onclick="filtersTeachers ()">Vis undervisere</button>
                 <button onclick="filterAdministration ()">Vis administrasjon</button>
             </article>
-            <!--COMMENT HERE-->
+            <!--this is all the buttons for the menu at the top where you can filter between employee positions-->
             <article class="menu-sortBT">
                 <button onclick="filterByPosition('Professor')">Professor</button>
                 <button onclick="filterByPosition('Dekan')">Dekan</button>
@@ -81,11 +82,11 @@
                 <button onclick="filterByPosition('Vaktmester')">Vaktmester</button>
                 <button onclick="filterByPosition('Lektor')">Lektor</button>
             </article>
-            <!--COMMENT HERE-->
+            <!--this article has been given the same id as in the js so the js data will be copied over her e in html and show up on the website-->
             <article id="employees-list">
 
             </article>
-            <!--COMMENT HERE-->
+            <!--Here I have given the article the same id as in the js so the layout and behavior of the js will be put in/activated in here in the html-->
             <article id="all-courses-list">
                 <h2>Kursoversikt</h2>
 
@@ -93,7 +94,7 @@
         </main>
     </body>
     <script>
-        //COMMENT HERE
+//This is how I set up the button for showing all employees with the admin button = true so when it is pressed it will then show the list over all the employees in the university
         displayAllEmployees (adminbutton = true)
         getAllCourses ()
 
@@ -101,7 +102,7 @@
 
         form.onsubmit = function (event) {
             event.preventDefault()
-    /*     const firstname = event.firstname.value*/
+ //this part is for the employee card on the site to show their names,mail,office,position and their courses. In the correct order we want these to show up on the cards.
 
             const firstname = event.target.elements [0] .value
             const lastname = event.target.elements [1] .value
@@ -122,7 +123,7 @@
             courses: courses
 
             }
-            // console.log (employee)
+//This here is to make it so when you click the add employee button (legg til ansat) it will actually add what you wrote in the fill out form as a new employee card on the website.
             addEmployee (employee)
             displayAllEmployees (adminbutton = true)
             form.reset ()

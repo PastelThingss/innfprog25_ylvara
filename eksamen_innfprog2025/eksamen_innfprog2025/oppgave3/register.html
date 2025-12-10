@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <!--COMMENT HERE-->
+    <!--added the script tag here that connects both js files to this html file without having to move them out of mappedel 1-->
     <script src="../oppgave1/actions.js"></script>
     <script src="../oppgave1/register.js"></script>
     <link rel="stylesheet" href="style.css"></link>
@@ -16,14 +16,14 @@
         <h1>Høgskolen JS</h1>
     </header>
         <main>
-            <!--COMMENT HERE-->
+            <!--here is all the buttons for the top menu as to show all employees, teachers and the administration. both articles has the same css class 
+            connected so they would look the same and behave the same-->
             <article class="menu-sortBT">
                 <button onclick="displayAllEmployees ()">Vis alle ansatte</button>
                 <button onclick="filtersTeachers ()">Vis undervisere</button>
                 <button onclick="filterAdministration ()">Vis administrasjon</button>
             </article>
-            <!--COMMENT HERE-->
-            
+            <!--this is all the buttons for the menu at the top where you can filter between employee positions-->
             <article class="menu-sortBT">
                 <p>Vis kun stilling:</p>
                 <button onclick="filterByPosition('Professor')">Professor</button>
@@ -33,19 +33,19 @@
                 <button onclick="filterByPosition('Lektor')">Lektor</button>
             </article>
             <h2>Ansatte</h2>
-            <!--COMMENT HERE-->
+            <!--this article has been given the same id as in the js so the js data will be copied over here in html and show up on the website-->
             <article id="employees-list">
 
             </article>
+            <!--Here I have given the article the same id as in the js so the layout and behavior of the js will be put in/activated in here in the html-->
             <article id="all-courses-list">
                 <h2>Kursoversikt</h2>
 
             </article>
-            <!--remember the overview of all the courses list with the bullet points next to the names-->
         </main>
     </body>
     <script>
-        //COMMENT HERE
+        //Here is the calling to the display all employees and get all courses so it has somewhere to get the script?
         displayAllEmployees ()
         getAllCourses ()
         /*displayAllEmployees (employees)*/
