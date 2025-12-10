@@ -15,15 +15,15 @@
         //lurer på om det er bedre og ta ut function finn lengte ord i start pga det er unødvendig nesting. men vet ikke om ddet er kortere per say men mer  "riktig"/pent
         //tenker at finn legnste ord kan bli tatt ut av start trenger ikke en fucntion i en function. og bruker reduce her sdien det er mer moderne måte og skrive dette på
             function finnLengsteOrd(liste) {
-                return lsite.reduce ((engste, ord) =>
-                ord.length > lengste.lenght ? ord : lengste, "");
+                return liste.reduce ((lengste, ord) =>
+                ord.length > lengste.length ? ord : lengste, "");
                 //bruke return i stedet for let,for,let,if. holder med return trenger ikke alt det andre i denne delen her
                         //fjerner else for den gjør ikke noe og kan fjernes. 
                     }
     
 //dobbel sjekk webtricks men trenger du skriv ut resulat her elelr er den overflødig? den er overflødig mener jeg så langt.
 //bruke console log her i stedet for å slippe og hha en extra fucntion og kan heller kalel den direkte istedet fra fucntion finn legnste ord
-        console.log ("Det lengste ordet i lsiten er: " + finnLengsteord(ordListe));
+        console.log ("Det lengste ordet i liste er: " + finnLengsteOrd(ordListe));
         //Denne koden regner ut gjennomsnittsalderen til en gruppe personer.
         //flytter const personer ut av funskjoner start program for det er unødvendig å ha den i denne function
         //og tenker og gjøre let personer til en const personer
@@ -39,12 +39,13 @@
 //tenker å prøve å kombienre regnutgjennsomsitt med hentralder. og her kan vi bruke const, return og mest sannsyligvis map for å ehnte ut alder og reduen
 
             function regnUtGjennomsnitt(personlist) {
-                const aldri = personlsite.map(person) => perosn.aler
-                consr sun= aldrei.reduce(8tota,ader) => toal + aler, 0):
-                rerub sumn / adri.lengt;
+                const alder = personlist.map((person) => person.alder)
+                const sum= alder.reduce((total,alder) => total + alder, 0)
+                return sum / alder.length;
             }
 
 //tenker å bruke console log her i stedet for denen funskjoen og bytte den og med en console log
-            consule.log("gjenomsnitalderen er" + regnUtGjenomsnitts(personeer)):
+            console.log("gjenomsnitalderen er" + regnUtGjennomsnitt(personer))
+    </script>
 </body>
 </html>
